@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Subtle grain overlay — tradeodds-style depth without a heavy texture file.
+   Pure SVG turbulence, ~600 bytes inlined. */
+.grain-overlay {
+  position: relative;
+}
+.grain-overlay::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  z-index: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+}
+
+/* Ensure stacking context above the grain overlay. */
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Soft radial glow under the hero — pure CSS, no images. */
+.hero-glow {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(225, 167, 48, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 30%, rgba(225, 167, 48, 0.08) 0%, transparent 50%);
+}

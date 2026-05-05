@@ -1,0 +1,155 @@
+{
+  "fetched_at": "2026-05-05T20:14:40.927Z",
+  "registry_updated_at": "2026-04-05T20:17:08Z",
+  "members": [
+    {
+      "npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
+      "role": "prime_authority",
+      "status": "active",
+      "member_since": "2026-02-20",
+      "display_name": "Lonnie VanZandt",
+      "services": [
+        {
+          "name": "dpyc-oracle",
+          "url": "https://dpyc-oracle.fastmcp.app/mcp",
+          "description": "DPYC Oracle — community concierge for the Honor Chain"
+        }
+      ],
+      "upstream_authority_npub": null,
+      "notes": "Founding Prime Authority of the DPYC Honor Chain"
+    },
+    {
+      "npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
+      "role": "authority",
+      "status": "active",
+      "member_since": "2026-03-01",
+      "display_name": "Lonnie-Authority",
+      "services": [
+        {
+          "name": "tollbooth-authority",
+          "url": "https://tollbooth-authority.fastmcp.app/mcp",
+          "description": "DPYC Authority — certificate signing and operator registration"
+        }
+      ],
+      "upstream_authority_npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
+      "notes": "Dedicated Authority identity for Tollbooth certificate signing"
+    },
+    {
+      "npub": "npub15e3ver3pskqsuqzszrp9mxpks7tqg7kedzyhmxfwlmu2jf8enaas86ll75",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-03-11",
+      "display_name": "schwab-mcp",
+      "services": [
+        {
+          "name": "schwab-mcp",
+          "url": "https://schwab-mcp.fastmcp.app/mcp",
+          "description": "Charles Schwab brokerage data via MCP with Tollbooth monetization"
+        }
+      ],
+      "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
+      "notes": "Schwab MCP Server — brokerage data operator"
+    },
+    {
+      "npub": "npub19gqrkwsssnz5dl6mj54memy65g4lq7qu7efu532nma3p8c6yzugse3f7a2",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-03-01",
+      "display_name": "Excalibur MCP",
+      "services": [
+        {
+          "name": "Excalibur MCP",
+          "url": "https://excalibur-mcp.fastmcp.app/mcp",
+          "description": "Social media posting via MCP with Tollbooth monetization"
+        }
+      ],
+      "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
+      "notes": "Excalibur MCP Server — Social media operator"
+    },
+    {
+      "npub": "npub1sz60evcudpnaa9q9rmtnj9y4w6waz9vlt3p23hg82q3mlwu7y2xqem9rpl",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-04-05",
+      "display_name": "npub1sz60evcudpn...",
+      "services": [
+        {
+          "name": "npub1sz60evcudpn...",
+          "url": "https://taxsort-mcp.fastmcp.app/mcp",
+          "description": "MCP Operator registered under Authority npub1fuhq0clgzhh..."
+        }
+      ],
+      "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
+      "notes": "Registered via Authority-mediated operator registration protocol"
+    },
+    {
+      "npub": "npub1vt9hpckkqvtkuxffrh7kun8vsvsl8rwjr0lfc9utgpdr3u7c5tcqv33g0y",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-03-25",
+      "display_name": "Tollbooth Sample",
+      "services": [
+        {
+          "name": "Tollbooth Sample",
+          "url": "https://tollbooth-sample.fastmcp.app/mcp",
+          "description": "MCP Operator registered under Authority npub1fuhq0clgzhh..."
+        }
+      ],
+      "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
+      "notes": "Registered via Authority-mediated operator registration protocol"
+    },
+    {
+      "npub": "npub1y20qa7d3ddmh6730hdr0u0r08zys4p7pyk30uhur9edx4d88q4zqnr3q2h",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-02-20",
+      "display_name": "thebrain-mcp",
+      "services": [
+        {
+          "name": "thebrain-mcp",
+          "url": "https://personal-brain.fastmcp.app/mcp",
+          "description": "TheBrain knowledge graph access via MCP"
+        }
+      ],
+      "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
+      "notes": "First Tollbooth Operator — TheBrain MCP Server"
+    },
+    {
+      "npub": "npub125zw84dlssyme5dddy4ck5tfqatsd5f7pvyn54ewmlmzrs3758dqghjypu",
+      "role": "advocate",
+      "status": "active",
+      "member_since": "2026-03-10",
+      "display_name": "OAuth2 Authorization Code Collector",
+      "services": [
+        {
+          "name": "tollbooth-oauth2-collector",
+          "url": "https://tollbooth-oauth2-collector.fastmcp.app",
+          "description": "Community OAuth2 code storage and retrieval via MCP tools"
+        },
+        {
+          "name": "tollbooth-oauth2-callback",
+          "url": "https://tollbooth--9332e0141cea11f1af0b42dde27851f2.web.val.run",
+          "description": "Serverless OAuth2 browser callback — receives GET redirects from OAuth providers"
+        }
+      ],
+      "upstream_authority_npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
+      "notes": "Registered as community utility Advocate via Oracle"
+    },
+    {
+      "npub": "npub1ds30lhxws60mmp8xru258vfakr2sqtn3etszwu9s95k0t8vkx9lsfqwjg9",
+      "role": "advocate",
+      "status": "active",
+      "member_since": "2026-03-30",
+      "display_name": "Tollbooth Shortlinks",
+      "services": [
+        {
+          "name": "tollbooth-shortlinks",
+          "url": "https://tollbooth-shortlinks.fastmcp.app/mcp",
+          "description": "Community utility — ephemeral, human-friendly short URLs for OAuth flows and long URLs. 24-hour TTL, no tracking, no interstitials."
+        }
+      ],
+      "upstream_authority_npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
+      "notes": "Registered as community utility Advocate via Oracle"
+    }
+  ]
+}
