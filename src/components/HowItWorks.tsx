@@ -29,7 +29,7 @@ export default function HowItWorks() {
     <section id="how" className="border-t border-ink-400/30 bg-ink-700">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <h2 className="text-4xl sm:text-5xl font-light tracking-tight">
-          How a paid tool call works.
+          Generate Profit from your MCP without KYC
         </h2>
         <p className="mt-4 text-ink-100 max-w-readable">
           Four moves, the same on every Operator. The wheel handles identity,
