@@ -15,13 +15,11 @@ export default function Hero() {
             Don't Pester Your Customer™
           </p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight">
-            Charge per tool call.{' '}
-            <span className="text-brand-400 font-semibold">Skip the payment popup.</span>
+            MCP Monetization for{' '}
+            <span className="text-brand-400 font-semibold">BTC Entrepreneurs</span>
           </h1>
           <p className="mt-8 text-xl text-ink-100 leading-relaxed max-w-readable">
-            Tollbooth DPYC™ monetizes MCP servers with pre-funded Bitcoin Lightning
-            balances. Patrons fund once. Then they use your tools without interruption —
-            no KYC, no subscriptions, no per-request payment negotiation.
+            Sound-money Commerce without KYC or KYT.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
