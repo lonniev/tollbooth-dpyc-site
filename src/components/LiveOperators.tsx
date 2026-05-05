@@ -23,20 +23,20 @@ const { fetched_at, registry_updated_at, members } = operatorsData as {
   members: Member[];
 };
 
-// Show the public-facing roles only; persona-non-grata and non-active members
-// are filtered out at render time so we never accidentally promote a banned npub.
+// Show registered Authorities and Operators only. Advocates (community utility
+// services like OAuth2 collectors, shortlinks) are registered too but are not
+// the audience this section addresses; persona-non-grata and non-active members
+// are also excluded so we never accidentally promote a banned npub.
 const VISIBLE_ROLES = new Set([
   'prime_authority',
   'authority',
   'operator',
-  'advocate',
 ]);
 
 const ROLE_LABEL: Record<string, string> = {
   prime_authority: 'Prime Authority',
   authority: 'Authority',
   operator: 'Operator',
-  advocate: 'Advocate',
 };
 
 function formatTime(iso: string | null | undefined): string {
@@ -56,13 +56,13 @@ export default function LiveOperators() {
     <section id="operators" className="border-t border-ink-400/30 bg-ink-800">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <h2 className="text-4xl sm:text-5xl font-light tracking-tight">
-          {/* [section headline TBD] */}
-          Live on the Honor Chain.
+          Registered Authorities and Operators
         </h2>
         <p className="mt-4 text-ink-100 max-w-readable">
           {/* [section subhead TBD] */}
-          Members currently registered with the DPYC community registry. Click any to see
-          its services or the live MCP endpoint.
+          Currently registered with the DPYC community registry. Click any to see
+          its services or live MCP endpoint. Patrons do not need to register —
+          only Authorities and Operators do.
         </p>
 
         {visible.length === 0 ? (
