@@ -26,7 +26,8 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-6 text-xs text-ink-300">
-          Tollbooth-DPYC™ — site v{__APP_VERSION__} · Bitcoin Lightning micropayments for the agentic web.
+          Tollbooth DPYC™ · Don't Pester Your Customer™ · Bitcoin Lightning at the
+          MCP tool layer · site v{__APP_VERSION__}
         </p>
       </div>
     </footer>

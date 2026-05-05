@@ -13,24 +13,23 @@ export default function PricingStudio() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-brand-300 text-sm font-semibold tracking-widest uppercase mb-4 inline-flex items-center gap-2">
-              <Eye size={14} /> The economy is observable
+              <Eye size={14} /> A workbench, not a dashboard
             </p>
             <h2 className="text-4xl sm:text-5xl font-light tracking-tight">
-              {/* [section headline TBD] */}
-              Pricing Studio: see the dashboard a black-box payment processor would never show you.
+              Pricing Studio. The native iPadOS workbench for your Tollbooth.
             </h2>
             <p className="mt-6 text-ink-100 leading-relaxed max-w-readable">
-              {/* [section copy TBD — owner's voice] */}
-              An iOS app that visualizes the constraints, tranche lifetimes, demand curves,
-              and per-patron account statements behind your operator. Change pricing models,
-              add surge windows, set happy-hour discounts — the same data your patrons can
-              audit, you can edit live.
+              Inspect, design, simulate, and deploy Tollbooth pricing models from
+              an iPad. Load any Operator's pricing from its MCP endpoint, edit
+              per-tool prices inline, build the constraint pipeline visually, and
+              diff your changes against the live server before you push.
             </p>
             <ul className="mt-6 space-y-2 text-ink-100 text-sm">
-              <li>— Constraint editor with real-time evaluation against your active model</li>
-              <li>— Tranche lifetime visualizer (no demurrage charged in arrears)</li>
-              <li>— Per-patron statement infographics — auditable, signed, shareable</li>
-              <li>— Built natively in Swift; works against your live MCP</li>
+              <li>— Live pricing editor with server-state diff before deploy</li>
+              <li>— Constraint pipeline builder — surge, happy-hour, supply caps</li>
+              <li>— Six-phase AI consultant (Claude) for designing a fresh model</li>
+              <li>— Second-opinion review from Grok before you deploy</li>
+              <li>— Multi-identity Nostr DM channel for credentials and Authority claims</li>
             </ul>
           </motion.div>
 

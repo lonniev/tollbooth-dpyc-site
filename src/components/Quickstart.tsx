@@ -43,14 +43,12 @@ export default function Quickstart() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-4xl sm:text-5xl font-light tracking-tight">
-            {/* [section headline TBD] */}
             Five minutes to a paid tool.
           </h2>
           <p className="mt-4 text-ink-100 max-w-readable">
-            {/* [section subhead TBD] */}
-            Install the wheel, decorate one async function, register standard tools.
-            The SDK handles identity, billing, rollback, and audit. You write only the
-            domain logic.
+            Install the wheel. Decorate one async function. Register the standard
+            tools. The SDK handles identity, billing, rollback, and audit — you
+            write only the domain code.
           </p>
 
           <div className="mt-10 relative rounded-lg border border-ink-400/40 bg-ink-800 overflow-hidden">

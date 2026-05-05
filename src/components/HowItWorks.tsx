@@ -5,22 +5,22 @@ const steps = [
   {
     icon: KeyRound,
     title: 'Patron proves npub',
-    body: 'Single Nostr-DM challenge — no email, no password, no KYC. Proof is poison-keyed and persists across operator restarts.',
+    body: 'A single Nostr DM challenge — no email, no password, no KYC. The signed reply is the proof. Poison-keyed and persisted; survives operator restarts.',
   },
   {
     icon: Wallet,
-    title: 'Patron pre-funds a balance',
-    body: 'One Lightning invoice for an arbitrary number of satoshis. Funds settle instantly to your operator vault.',
+    title: 'Patron pre-funds a credit balance',
+    body: 'One Lightning invoice. Sats settle instantly into the patron\'s tranche. Tranches expire on a schedule you publish — never in arrears.',
   },
   {
     icon: Zap,
     title: 'Tool calls debit per use',
-    body: 'Ad-valorem or flat-rate fares — your pricing model. The wheel handles billing, rollback, and constraint evaluation. You write only domain code.',
+    body: 'Ad valorem or flat fares — your pricing model. The SDK gates the call against your constraint pipeline, debits the ledger, rolls back on failure. You write only the domain code.',
   },
   {
     icon: ScrollText,
-    title: 'Authority certifies, ledger anchors',
-    body: 'Every purchase is Schnorr-signed by an Authority. Ledgers are notarized to Bitcoin via OpenTimestamps — auditable forever.',
+    title: 'Authority certifies. Ledger anchors.',
+    body: 'Every credit purchase is Schnorr-signed by a registered Authority. Ledgers are notarized to Bitcoin via OpenTimestamps — provably auditable, no trust required.',
   },
 ];
 
@@ -29,12 +29,11 @@ export default function HowItWorks() {
     <section id="how" className="border-t border-ink-400/30 bg-ink-700">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <h2 className="text-4xl sm:text-5xl font-light tracking-tight">
-          {/* [section headline TBD] */}
-          How the toll booth works.
+          How a paid tool call works.
         </h2>
         <p className="mt-4 text-ink-100 max-w-readable">
-          {/* [section subhead TBD] */}
-          Four moves, same on every operator. The DPYC SDK does the heavy lifting.
+          Four moves, the same on every Operator. The wheel handles identity,
+          billing, rollback, and audit — you write only the domain code.
         </p>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

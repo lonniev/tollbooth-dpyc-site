@@ -12,18 +12,16 @@ export default function Hero() {
           className="max-w-3xl"
         >
           <p className="text-brand-300 text-sm font-semibold tracking-widest uppercase mb-6">
-            Don't Pester Your Customer
+            Don't Pester Your Customer™
           </p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight">
-            {/* [hero headline TBD — e.g. "Monetize your MCP without the friction."] */}
-            Monetize your MCP{' '}
-            <span className="text-brand-400 font-semibold">without the friction.</span>
+            Charge per tool call.{' '}
+            <span className="text-brand-400 font-semibold">Skip the payment popup.</span>
           </h1>
           <p className="mt-8 text-xl text-ink-100 leading-relaxed max-w-readable">
-            {/* [subhead TBD — owner's voice] */}
-            Bitcoin Lightning micropayments for MCP servers. Patrons pre-fund a satoshi
-            balance; you collect fares per tool call. No KYC, no stablecoins, no
-            mid-session payment popups.
+            Tollbooth DPYC™ monetizes MCP servers with pre-funded Bitcoin Lightning
+            balances. Patrons fund once. Then they use your tools without interruption —
+            no KYC, no subscriptions, no per-request payment negotiation.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">

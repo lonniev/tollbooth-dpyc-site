@@ -59,10 +59,9 @@ export default function LiveOperators() {
           Registered Authorities and Operators
         </h2>
         <p className="mt-4 text-ink-100 max-w-readable">
-          {/* [section subhead TBD] */}
-          Currently registered with the DPYC community registry. Click any to see
-          its services or live MCP endpoint. Patrons do not need to register —
-          only Authorities and Operators do.
+          Currently registered in the DPYC™ community registry. Click any card
+          for its live MCP endpoint. Patrons do not register — only Authorities
+          and Operators do.
         </p>
 
         {visible.length === 0 ? (
