@@ -31,8 +31,8 @@ const steps = [
   },
   {
     icon: SlidersHorizontal,
-    title: 'Operators set their own tool fees.',
-    body: 'Per-tool flat fees, ad valorem rates, surge windows, happy-hour discounts, supply caps — your pricing model, your constraint pipeline. No platform takes a cut from above.',
+    title: 'Operators run dynamic per-tool pricing.',
+    body: 'Prices live in your MCP, not your source code. Edit via standardized tool calls or the Pricing Studio iPad app. Run campaigns. A/B test surge windows and happy-hour discounts. Craft an economic business around your APIs — not pay a programming team to recode and redeploy software.',
   },
   {
     icon: BadgeCheck,
