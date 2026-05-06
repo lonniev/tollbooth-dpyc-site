@@ -17,7 +17,7 @@ const steps = [
   {
     icon: Wallet,
     title: 'Payment is an out-of-band Lightning invoice.',
-    body: 'One Lightning invoice tops up the Patron\'s credit balance. The Tollbooth never sees fiat, never holds a card, never wires money. Sats settle directly between Patron and Operator wallet.',
+    body: 'Lightning invoices top up the Patron\'s credit balance over time — occasional, out of the hot path of tool calls. Anyone can fund a Patron on their behalf. While Operators conduct commerce only in Lightning BTC, the Patron\'s wallet handles the on-ramp from whatever it supports — fiat, stablecoin, or BTC.',
   },
   {
     icon: Send,
