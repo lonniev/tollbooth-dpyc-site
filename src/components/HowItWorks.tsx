@@ -37,7 +37,7 @@ const steps = [
   {
     icon: BadgeCheck,
     title: 'Authorities earn ad valorem for network support.',
-    body: 'A small percentage of every credit purchase flows to the registering Authority — the entity that vouched for the Operator and provides certificate signing, registry maintenance, and dispute resolution. Stake aligned with reliability.',
+    body: 'A small percentage of every credit purchase flows to the registering Authority — the entity that vouched for the Operator. Authorities provide certificate signing, registry maintenance, dispute resolution, and the persistence capability that stateless MCP Operators depend on. The ad valorem covers recurring IT infrastructure costs and keeps the Authority\'s stake aligned with Operator reliability.',
   },
 ];
 

@@ -44,7 +44,16 @@ export default function Footer() {
             >
               Apache-2.0 licensed
             </a>
-            . Patent Pending. Site v{__APP_VERSION__}.
+            .{' '}
+            <a
+              href="https://patentcenter.uspto.gov/applications/64045999"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-2 hover:text-brand-300"
+            >
+              Patent Pending — U.S. Provisional App. No. 64/045,999
+            </a>
+            . Site v{__APP_VERSION__}.
           </p>
         </div>
       </div>
