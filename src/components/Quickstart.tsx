@@ -4,25 +4,40 @@ import { useState } from 'react';
 
 const SNIPPET = `pip install tollbooth-dpyc
 
-# In your FastMCP server:
-from tollbooth import OperatorRuntime, register_standard_tools, ToolIdentity
+# server.py
+from fastmcp import FastMCP
+from tollbooth.runtime import OperatorRuntime, register_standard_tools
+from tollbooth.tool_identity import (
+    ToolIdentity, STANDARD_IDENTITIES, capability_uuid,
+)
+from tollbooth.slug_tools import make_slug_tool
 
-TOOL_REGISTRY = {
-    "get_weather": ToolIdentity(
+mcp = FastMCP("my-mcp")
+tool = make_slug_tool(mcp, "my")  # tools become my_<name>
+
+# Domain tools, registered by UUID-derived ToolIdentity.tool_id
+DOMAIN = [
+    ToolIdentity(
         capability="get_weather",
         category="read",
-        intent="Returns current weather for a coordinate.",
+        intent="Current weather for a coordinate.",
     ),
-}
+]
+TOOL_REGISTRY = {ti.tool_id: ti for ti in DOMAIN}
 
-runtime = OperatorRuntime(tool_registry=TOOL_REGISTRY)
+runtime = OperatorRuntime(
+    tool_registry={**STANDARD_IDENTITIES, **TOOL_REGISTRY},
+    service_name="My MCP",
+)
+
+# Standard tools — check_balance, purchase_credits, Secure Courier,
+# proof exchange, pricing, onboarding — all from the wheel.
+register_standard_tools(mcp, "my", runtime, service_name="my-mcp")
 
 @tool
-@runtime.paid_tool(TOOL_REGISTRY["get_weather"].tool_id)
+@runtime.paid_tool(capability_uuid("get_weather"))
 async def get_weather(lat: float, lon: float, npub: str = "", proof: str = ""):
-    return await weather.get(lat, lon)
-
-register_standard_tools(mcp, slug="weather", rt=runtime)`;
+    return await weather.get(lat, lon)`;
 
 export default function Quickstart() {
   const [copied, setCopied] = useState(false);
