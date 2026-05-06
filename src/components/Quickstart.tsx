@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Copy } from 'lucide-react';
+import { Copy, Github } from 'lucide-react';
 import { useState } from 'react';
 
 const SNIPPET = `pip install tollbooth-dpyc
@@ -76,6 +76,21 @@ export default function Quickstart() {
             </a>{' '}
             — copy and run it locally before wiring your own domain code.
           </p>
+
+          <div className="mt-12 rounded-lg border border-brand-400/40 bg-ink-800/60 p-6 flex items-start gap-4">
+            <Github className="text-brand-400 flex-shrink-0 mt-0.5" size={28} />
+            <div>
+              <h3 className="font-semibold mb-1 text-lg">
+                Open source. Apache-2.0.
+              </h3>
+              <p className="text-sm text-ink-100 leading-relaxed">
+                Every component on GitHub — the wheel, Pricing Studio, the
+                Authority service, the sample operator, the Oracle. Inspect,
+                audit, fork, deploy. No closed-source dependencies, no opaque
+                middleware. The protocol is the code.
+              </p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
