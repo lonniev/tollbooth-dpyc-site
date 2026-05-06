@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Eye } from 'lucide-react';
+import PricingStudioCarousel from './PricingStudioCarousel';
 
 export default function PricingStudio() {
   return (
@@ -45,10 +46,8 @@ export default function PricingStudio() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="aspect-[3/4] rounded-2xl border border-ink-400/40 bg-gradient-to-br from-ink-600 to-ink-700 p-8 flex items-center justify-center text-ink-200"
           >
-            {/* TODO: replace with real Pricing Studio screenshot/Loom */}
-            <span className="text-sm italic">[ Pricing Studio screenshot — drop a PNG in /public/pricing-studio.png ]</span>
+            <PricingStudioCarousel />
           </motion.div>
         </div>
       </div>
