@@ -1,20 +1,24 @@
-// Discreet "built on" strip — single muted row of brand logos served
-// from the simple-icons CDN at a single muted color. FastMCP doesn't
-// have a simple-icons entry; rendered as a text-styled wordmark in
-// the same muted weight to keep the row visually consistent.
-//
-// Each logo links to the project's home. Hover lifts the opacity so
-// the strip reads as decorative until the visitor hovers it.
+// Discreet "built on" strip. Mixes simple-icons CDN logos for the
+// projects that have entries (Bitcoin, Lightning, Python) with text
+// wordmarks for those that don't (BTCPay Server, Wallet of Satoshi,
+// Nostr, FastMCP). Uniform muted gray, opacity lifts on hover.
 
 const SUBTLE = '9CA3AF'; // ink-300 equivalent — kept low-contrast on purpose
 
-const stack = [
-  { name: 'Bitcoin', slug: 'bitcoin', url: 'https://bitcoin.org' },
-  { name: 'Lightning Network', slug: 'lightningnetwork', url: 'https://lightning.network' },
-  { name: 'BTCPay Server', slug: 'btcpayserver', url: 'https://btcpayserver.org' },
-  { name: 'Wallet of Satoshi', slug: 'walletofsatoshi', url: 'https://walletofsatoshi.com' },
-  { name: 'Nostr', slug: 'nostr', url: 'https://nostr.com' },
-  { name: 'Python', slug: 'python', url: 'https://python.org' },
+type StackItem =
+  | { kind: 'icon'; name: string; slug: string; url: string }
+  | { kind: 'wordmark'; name: string; label: string; url: string };
+
+// simple-icons slugs verified against cdn.simpleicons.org;
+// the rest fall back to a wordmark in matching weight/color.
+const stack: StackItem[] = [
+  { kind: 'icon', name: 'Bitcoin', slug: 'bitcoin', url: 'https://bitcoin.org' },
+  { kind: 'icon', name: 'Lightning', slug: 'lightning', url: 'https://lightning.network' },
+  { kind: 'wordmark', name: 'BTCPay Server', label: 'BTCPay Server', url: 'https://btcpayserver.org' },
+  { kind: 'wordmark', name: 'Wallet of Satoshi', label: 'Wallet of Satoshi', url: 'https://walletofsatoshi.com' },
+  { kind: 'wordmark', name: 'Nostr', label: 'Nostr', url: 'https://nostr.com' },
+  { kind: 'icon', name: 'Python', slug: 'python', url: 'https://python.org' },
+  { kind: 'wordmark', name: 'FastMCP', label: 'FastMCP', url: 'https://gofastmcp.com' },
 ];
 
 export default function TechStack() {
@@ -24,10 +28,10 @@ export default function TechStack() {
         <p className="text-xs uppercase tracking-widest text-ink-300 mb-6">
           Built on
         </p>
-        <div className="flex flex-wrap items-center gap-x-12 gap-y-6">
+        <div className="flex flex-wrap items-center gap-x-10 gap-y-6">
           {stack.map((item) => (
             <a
-              key={item.slug}
+              key={item.name}
               href={item.url}
               target="_blank"
               rel="noreferrer"
@@ -35,28 +39,20 @@ export default function TechStack() {
               aria-label={item.name}
               className="opacity-60 hover:opacity-100 transition-opacity"
             >
-              <img
-                src={`https://cdn.simpleicons.org/${item.slug}/${SUBTLE}`}
-                alt={item.name}
-                className="h-6 w-auto"
-                loading="lazy"
-              />
+              {item.kind === 'icon' ? (
+                <img
+                  src={`https://cdn.simpleicons.org/${item.slug}/${SUBTLE}`}
+                  alt={item.name}
+                  className="h-6 w-auto"
+                  loading="lazy"
+                />
+              ) : (
+                <span className="font-mono text-ink-200 text-sm tracking-tight">
+                  {item.label}
+                </span>
+              )}
             </a>
           ))}
-
-          {/* FastMCP — wordmark fallback (no simple-icons entry). */}
-          <a
-            href="https://gofastmcp.com"
-            target="_blank"
-            rel="noreferrer"
-            title="FastMCP"
-            aria-label="FastMCP"
-            className="opacity-60 hover:opacity-100 transition-opacity"
-          >
-            <span className="font-mono text-ink-200 text-sm tracking-tight">
-              fastmcp
-            </span>
-          </a>
         </div>
       </div>
     </section>
