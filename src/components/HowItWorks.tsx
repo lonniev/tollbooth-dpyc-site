@@ -27,7 +27,7 @@ const steps = [
   {
     icon: Layers,
     title: 'The Tollbooth stores no money.',
-    body: 'Credit balances are accounting entries against sats already in the Operator\'s wallet. The protocol carries no custody and no settlement risk. The SDK is a ledger, not a payment processor.',
+    body: 'Credit balances are accounting entries against sats already in the Operator\'s wallet. Credits sit in tranches with intentional demurrage — a published expiry that fosters commerce rather than hoarding. The protocol carries no custody and no settlement risk; the SDK is a ledger, not a payment processor.',
   },
   {
     icon: SlidersHorizontal,
