@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Plus } from 'lucide-react';
 import operatorsData from '../data/operators.json';
 
 type Service = {
@@ -103,12 +104,42 @@ export default function LiveOperators() {
                 </Card>
               );
             })}
+
+            <motion.a
+              href="https://github.com/lonniev/tollbooth-sample"
+              target="_blank"
+              rel="noreferrer"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{
+                duration: 0.3,
+                delay: Math.min(visible.length * 0.04, 0.4),
+              }}
+              className="rounded-lg border-2 border-dashed border-brand-400/50 bg-ink-700/30 p-5 transition-colors hover:border-brand-300 hover:bg-ink-600/40 flex flex-col items-center justify-center text-center"
+            >
+              <Plus className="text-brand-400 mb-2" size={32} />
+              <h3 className="font-semibold text-brand-300 mb-1">
+                Entrepreneur: Add Yours Here
+              </h3>
+              <p className="text-sm text-ink-100">
+                Register your MCP. Start collecting Lightning fares per tool call.
+              </p>
+            </motion.a>
           </div>
         )}
 
         <p className="mt-8 text-xs text-ink-300">
           Registry last updated {formatTime(registry_updated_at)}; site snapshot taken{' '}
-          {formatTime(fetched_at)}. Refreshed at every site build.
+          {formatTime(fetched_at)}. Refreshed at every site build. Agent-readable
+          listing at{' '}
+          <a
+            href="/llms.txt"
+            className="underline underline-offset-2 hover:text-brand-300"
+          >
+            /llms.txt
+          </a>
+          .
         </p>
       </div>
     </section>

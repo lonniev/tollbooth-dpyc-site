@@ -1,0 +1,45 @@
+# Tollbooth DPYC™
+
+> MCP Monetization for BTC Entrepreneurs. Sound-money commerce without KYC or KYT. Pre-funded Bitcoin Lightning balances at the MCP tool layer.
+
+This file lists DPYC Authorities and Operators registered in the community
+registry — MCP servers that AI agents can connect to. Each endpoint follows
+the Model Context Protocol over SSE / streamable-HTTP and accepts pre-funded
+credit balances paid via Bitcoin Lightning.
+
+## Authorities
+- [Lonnie VanZandt](https://dpyc-oracle.fastmcp.app/mcp): DPYC Oracle — community concierge for the Honor Chain
+- [Lonnie-Authority](https://tollbooth-authority.fastmcp.app/mcp): DPYC Authority — certificate signing and operator registration
+
+## Operators
+- [schwab-mcp](https://schwab-mcp.fastmcp.app/mcp): Charles Schwab brokerage data via MCP with Tollbooth monetization
+- [Excalibur MCP](https://excalibur-mcp.fastmcp.app/mcp): Social media posting via MCP with Tollbooth monetization
+- [npub1sz60evcudpn...](https://taxsort-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh...
+- [Tollbooth Sample](https://tollbooth-sample.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh...
+- [thebrain-mcp](https://personal-brain.fastmcp.app/mcp): TheBrain knowledge graph access via MCP
+
+## Advocates (community utility services)
+- [OAuth2 Authorization Code Collector](https://tollbooth-oauth2-collector.fastmcp.app): Community OAuth2 code storage and retrieval via MCP tools
+- [OAuth2 Authorization Code Collector](https://tollbooth--9332e0141cea11f1af0b42dde27851f2.web.val.run): Serverless OAuth2 browser callback — receives GET redirects from OAuth providers
+- [Tollbooth Shortlinks](https://tollbooth-shortlinks.fastmcp.app/mcp): Community utility — ephemeral, human-friendly short URLs for OAuth flows and long URLs. 24-hour TTL, no tracking, no interstitials.
+
+## How to connect
+Each server in this list speaks MCP. To call a paid tool on any of them:
+
+1. Identify yourself with a Nostr `npub` (public key).
+2. Establish ownership via `request_npub_proof` / `receive_npub_proof` — a Nostr DM challenge bound to your application session.
+3. Pre-fund a credit balance via `purchase_credits` — pay the returned Lightning invoice.
+4. Invoke any tool, passing the `proof_token` from step 2 as the `proof` parameter.
+
+Free tools (`session_status`, `check_balance`, `check_oauth_status`, `check_proof_status`, `request_npub_proof`, `receive_npub_proof`, `purchase_credits`, `check_payment`) never require credits.
+
+## Source
+- https://github.com/lonniev/tollbooth-dpyc — the SDK (Apache-2.0, Patent Pending)
+- https://github.com/lonniev/dpyc-community — community registry
+- https://github.com/lonniev/tollbooth-sample — reference Operator implementation
+- https://github.com/lonniev/tollbooth-pricing-studio — iPadOS pricing workbench
+
+## Site
+- https://tollbooth-dpyc.com
+- Registry updated 2026-04-05T20:17:08Z
+- Snapshot taken 2026-05-06T01:31:36.498Z
