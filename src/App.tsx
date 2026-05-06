@@ -3,6 +3,7 @@ import HowItWorks from './components/HowItWorks';
 import PricingStudio from './components/PricingStudio';
 import Quickstart from './components/Quickstart';
 import LiveOperators from './components/LiveOperators';
+import TechStack from './components/TechStack';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
       <PricingStudio />
       <Quickstart />
       <LiveOperators />
+      <TechStack />
       <Footer />
     </div>
   );

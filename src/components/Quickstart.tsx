@@ -58,7 +58,7 @@ export default function Quickstart() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-4xl sm:text-5xl font-light tracking-tight">
-            Five minutes to a paid tool.
+            Zero to Hero Profits in Minutes.
           </h2>
           <p className="mt-4 text-ink-100 max-w-readable">
             Install the wheel. Decorate one async function. Register the standard
