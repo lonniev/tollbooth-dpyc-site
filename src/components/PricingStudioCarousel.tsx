@@ -105,7 +105,7 @@ export default function PricingStudioCarousel() {
       role="region"
       aria-roledescription="carousel"
       aria-label="Pricing Studio screens"
-      className="relative aspect-[3/4] rounded-2xl border border-ink-400/40 bg-gradient-to-br from-ink-600 to-ink-700 overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand-400/40"
+      className="relative aspect-[4/3] bg-gradient-to-br from-ink-600 to-ink-700 overflow-hidden focus:outline-none"
     >
       <AnimatePresence mode="wait">
         <motion.div

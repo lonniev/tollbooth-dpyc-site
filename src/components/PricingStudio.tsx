@@ -6,7 +6,7 @@ export default function PricingStudio() {
   return (
     <section id="pricing-studio" className="border-t border-ink-400/30 bg-ink-800">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div className="grid gap-12 lg:grid-cols-[2fr_3fr] lg:items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -42,12 +42,32 @@ export default function PricingStudio() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            style={{ perspective: '1800px' }}
+            className="relative"
           >
-            <PricingStudioCarousel />
+            {/* iPad mockup: bezel + screen + subtle hardware cues.
+                The .ipad-tilt class applies a 3D rotation above lg
+                and flattens the device on mobile (where the section
+                stacks single-column). */}
+            <div
+              className="ipad-tilt relative rounded-[28px] bg-ink-900 p-2.5 sm:p-3 ring-1 ring-ink-400/40"
+              style={{
+                boxShadow:
+                  '0 50px 80px -30px rgba(0, 0, 0, 0.7), 0 25px 40px -20px rgba(225, 167, 48, 0.10)',
+              }}
+            >
+              {/* Front-camera dot */}
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-ink-400/60" />
+
+              {/* Screen */}
+              <div className="rounded-[18px] overflow-hidden ring-1 ring-ink-300/10">
+                <PricingStudioCarousel />
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -37,11 +37,16 @@ done
 
 ## Aspect ratio
 
-The carousel container is `aspect-[3/4]` (portrait, 720×960 at 1x).
-If you capture in landscape, change the class on the container in
-`PricingStudioCarousel.tsx` to `aspect-[4/3]`. Mixing aspect ratios
-in the carousel works but the bigger image's letterboxing on the
-smaller frames looks worse than a single ratio.
+The carousel container is `aspect-[4/3]` — landscape, matching how
+the iPad is actually used (and viewed in the marketing mockup, which
+shows the device in laptop orientation). Capture screens in
+**landscape** with the iPad held wide, or rotate after the fact.
+
+If you ever need portrait again, change the class on the container in
+`PricingStudioCarousel.tsx` to `aspect-[3/4]` and adjust the iPad
+mockup's aspect ratio to match. Mixing portrait and landscape in the
+same carousel makes letterboxing unavoidable on one or the other —
+pick a single ratio.
 
 ## Adding or removing screens
 
