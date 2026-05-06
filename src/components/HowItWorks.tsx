@@ -1,26 +1,43 @@
 import { motion } from 'framer-motion';
-import { Wallet, KeyRound, Zap, ScrollText } from 'lucide-react';
+import {
+  KeyRound,
+  Wallet,
+  Send,
+  Layers,
+  SlidersHorizontal,
+  BadgeCheck,
+} from 'lucide-react';
 
 const steps = [
   {
     icon: KeyRound,
-    title: 'Patron proves npub',
-    body: 'A single Nostr DM challenge — no email, no password, no KYC. The signed reply is the proof. Poison-keyed and persisted; survives operator restarts.',
+    title: 'Identity is a secure npub. Nothing more.',
+    body: 'A Nostr public key, plus a signed challenge to prove it. No email, no password, no KYC. The npub is the only thing the Operator ever sees.',
   },
   {
     icon: Wallet,
-    title: 'Patron pre-funds a credit balance',
-    body: 'One Lightning invoice. Sats settle instantly into the patron\'s tranche. Tranches expire on a schedule you publish — never in arrears.',
+    title: 'Payment is an out-of-band Lightning invoice.',
+    body: 'One Lightning invoice tops up the Patron\'s credit balance. The Tollbooth never sees fiat, never holds a card, never wires money. Sats settle directly between Patron and Operator wallet.',
   },
   {
-    icon: Zap,
-    title: 'Tool calls debit per use',
-    body: 'Ad valorem or flat fares — your pricing model. The SDK gates the call against your constraint pipeline, debits the ledger, rolls back on failure. You write only the domain code.',
+    icon: Send,
+    title: 'Credentials travel by Secure Courier.',
+    body: 'API keys, OAuth tokens, account selections — anything sensitive — move between Patron and Operator over Nostr-encrypted DMs. No web forms, no plaintext email, no shared password vault.',
   },
   {
-    icon: ScrollText,
-    title: 'Authority certifies. Ledger anchors.',
-    body: 'Every credit purchase is Schnorr-signed by a registered Authority. Ledgers are notarized to Bitcoin via OpenTimestamps — provably auditable, no trust required.',
+    icon: Layers,
+    title: 'The Tollbooth stores no money.',
+    body: 'Credit balances are accounting entries against sats already in the Operator\'s wallet. The protocol carries no custody and no settlement risk. The SDK is a ledger, not a payment processor.',
+  },
+  {
+    icon: SlidersHorizontal,
+    title: 'Operators set their own tool fees.',
+    body: 'Per-tool flat fees, ad valorem rates, surge windows, happy-hour discounts, supply caps — your pricing model, your constraint pipeline. No platform takes a cut from above.',
+  },
+  {
+    icon: BadgeCheck,
+    title: 'Authorities earn ad valorem for network support.',
+    body: 'A small percentage of every credit purchase flows to the registering Authority — the entity that vouched for the Operator and provides certificate signing, registry maintenance, and dispute resolution. Stake aligned with reliability.',
   },
 ];
 
@@ -32,11 +49,11 @@ export default function HowItWorks() {
           Generate Profit from your MCP without KYC
         </h2>
         <p className="mt-4 text-ink-100 max-w-readable">
-          Four moves, the same on every Operator. The wheel handles identity,
-          billing, rollback, and audit — you write only the domain code.
+          Six rules, encoded in the wheel. The same on every Tollbooth —
+          you write only the domain code.
         </p>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, i) => (
             <motion.div
               key={step.title}
