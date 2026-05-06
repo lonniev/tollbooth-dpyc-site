@@ -8,7 +8,7 @@ the Model Context Protocol over SSE / streamable-HTTP and accepts pre-funded
 credit balances paid via Bitcoin Lightning.
 
 ## Authorities
-- [Lonnie VanZandt](https://dpyc-oracle.fastmcp.app/mcp): DPYC Oracle — community concierge for the Honor Chain
+- [Lonnie VanZandt](https://dpyc-oracle.fastmcp.app/mcp): DPYC Oracle - concierge for the Don't Pester Your Customer network state
 - [Lonnie-Authority](https://tollbooth-authority.fastmcp.app/mcp): DPYC Authority — certificate signing and operator registration
 
 ## Operators
@@ -41,5 +41,5 @@ Free tools (`session_status`, `check_balance`, `check_oauth_status`, `check_proo
 
 ## Site
 - https://tollbooth-dpyc.com
-- Registry updated 2026-04-05T20:17:08Z
-- Snapshot taken 2026-05-06T01:31:36.498Z
+- Registry updated 2026-05-06T01:36:59Z
+- Snapshot taken 2026-05-06T01:37:25.018Z
