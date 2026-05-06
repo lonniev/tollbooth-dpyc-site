@@ -13,11 +13,18 @@ export default function PricingStudio() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-brand-300 text-sm font-semibold tracking-widest uppercase mb-4 inline-flex items-center gap-2">
-              <Eye size={14} /> A workbench, not a dashboard
+              <Eye size={14} /> An AI MBA Assistant, Not a Web Page
             </p>
             <h2 className="text-4xl sm:text-5xl font-light tracking-tight">
-              Pricing Studio. The native iPadOS workbench for your Tollbooth.
+              Tollbooth Pricing Studio.
             </h2>
+            <p className="mt-6 text-ink-100 leading-relaxed max-w-readable">
+              A native iPadOS, mobile-friendly Pricing Campaign analyst for your
+              Tollbooth-DPYC™ MCP.
+            </p>
+            <p className="mt-3 text-2xl text-brand-300 font-light leading-snug max-w-readable">
+              Optimize your business, not your HTTP traffic.
+            </p>
             <p className="mt-6 text-ink-100 leading-relaxed max-w-readable">
               Inspect, design, simulate, and deploy Tollbooth pricing models from
               an iPad. Load any Operator's pricing from its MCP endpoint, edit
