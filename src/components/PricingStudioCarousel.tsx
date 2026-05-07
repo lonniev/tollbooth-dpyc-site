@@ -164,7 +164,7 @@ export default function PricingStudioCarousel() {
           transition={{ duration: 0.4 }}
           className="mt-6 lg:mt-8 text-base text-ink-100 leading-relaxed text-center max-w-prose mx-auto"
         >
-          <strong className="text-ink-50 font-semibold">{title}</strong>
+          <strong className="text-brand-300 font-semibold">{title}</strong>
           {desc && <> {desc}</>}
         </motion.p>
       </AnimatePresence>

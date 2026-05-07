@@ -40,11 +40,11 @@
 }
 @media (min-width: 1024px) {
   .ipad-tilt {
-    transform: rotateY(-14deg) rotateX(3deg);
+    transform: rotateY(-22deg) rotateX(6deg);
   }
   .ipad-tilt:hover {
     /* Settle toward flat on hover so a curious viewer can read the
        screenshot squarely without it feeling locked-in. */
-    transform: rotateY(-4deg) rotateX(1deg);
+    transform: rotateY(-6deg) rotateX(2deg);
   }
 }
