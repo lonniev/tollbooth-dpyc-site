@@ -47,11 +47,13 @@ export default function PricingStudio() {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, delay: 0.1 }}
             style={{ perspective: '1800px' }}
-            className="relative"
+            className="relative lg:-mt-8"
           >
             {/* The carousel owns its own iPad bezel + 3D tilt + caption
-                below. PricingStudio.tsx just provides the perspective
-                context and the entrance animation. */}
+                below. PricingStudio.tsx provides the entrance animation
+                and a small negative top margin (lg only) so the iPad
+                sits a touch higher than vertical-center against the
+                taller text column. */}
             <PricingStudioCarousel />
           </motion.div>
         </div>

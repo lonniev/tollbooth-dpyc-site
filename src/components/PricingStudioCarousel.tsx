@@ -165,7 +165,7 @@ export default function PricingStudioCarousel() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -4 }}
           transition={{ duration: 0.4 }}
-          className="mt-6 lg:mt-8 text-base text-ink-100 leading-relaxed text-center max-w-prose mx-auto"
+          className="mt-10 lg:mt-14 text-base text-ink-100 leading-relaxed text-left max-w-prose"
         >
           <strong className="text-brand-300 font-semibold">{title}</strong>
           {desc && <> {desc}</>}
