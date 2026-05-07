@@ -49,25 +49,10 @@ export default function PricingStudio() {
             style={{ perspective: '1800px' }}
             className="relative"
           >
-            {/* iPad mockup: bezel + screen + subtle hardware cues.
-                The .ipad-tilt class applies a 3D rotation above lg
-                and flattens the device on mobile (where the section
-                stacks single-column). */}
-            <div
-              className="ipad-tilt relative rounded-[28px] bg-ink-900 p-2.5 sm:p-3 ring-1 ring-ink-400/40"
-              style={{
-                boxShadow:
-                  '0 50px 80px -30px rgba(0, 0, 0, 0.7), 0 25px 40px -20px rgba(225, 167, 48, 0.10)',
-              }}
-            >
-              {/* Front-camera dot */}
-              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-ink-400/60" />
-
-              {/* Screen */}
-              <div className="rounded-[18px] overflow-hidden ring-1 ring-ink-300/10">
-                <PricingStudioCarousel />
-              </div>
-            </div>
+            {/* The carousel owns its own iPad bezel + 3D tilt + caption
+                below. PricingStudio.tsx just provides the perspective
+                context and the entrance animation. */}
+            <PricingStudioCarousel />
           </motion.div>
         </div>
       </div>
