@@ -108,7 +108,7 @@ export default function PricingStudioCarousel() {
       >
         <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-ink-900/80" />
 
-        <div className="relative aspect-[4/3] rounded-[18px] overflow-hidden bg-gradient-to-br from-ink-600 to-ink-700 ring-1 ring-ink-900/60">
+        <div className="relative aspect-[2816/1940] rounded-[18px] overflow-hidden bg-gradient-to-br from-ink-600 to-ink-700 ring-1 ring-ink-900/60">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
