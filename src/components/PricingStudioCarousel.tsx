@@ -92,20 +92,23 @@ export default function PricingStudioCarousel() {
       aria-label="Pricing Studio screens"
       className="focus:outline-none"
     >
-      {/* iPad bezel: rounded-[28px] black bezel with a subtle ring, a
-          tiny front-camera dot at top-center, and the screen rendered
-          inside a slightly smaller rounded inset. The .ipad-tilt class
-          applies the 3D rotation above lg, flat on mobile. */}
+      {/* iPad bezel: silver/aluminum gradient so the device is visible
+          against the dark page and provides a real frame for the dark
+          screen content inside. Subtle top-to-bottom gradient suggests
+          light from above. Inner screen has a thin dark ring at the
+          bezel-to-LCD edge (same as a real iPad's matte black border
+          around the active panel). The .ipad-tilt class applies the
+          3D rotation above lg, flat on mobile. */}
       <div
-        className="ipad-tilt relative rounded-[28px] bg-ink-900 p-2.5 sm:p-3 ring-1 ring-ink-400/40"
+        className="ipad-tilt relative rounded-[28px] bg-gradient-to-b from-zinc-200 to-zinc-400 p-2.5 sm:p-3 ring-1 ring-zinc-500/30"
         style={{
           boxShadow:
             '0 50px 80px -30px rgba(0, 0, 0, 0.7), 0 25px 40px -20px rgba(225, 167, 48, 0.10)',
         }}
       >
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-ink-400/60" />
+        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-ink-900/80" />
 
-        <div className="relative aspect-[4/3] rounded-[18px] overflow-hidden bg-gradient-to-br from-ink-600 to-ink-700 ring-1 ring-ink-300/10">
+        <div className="relative aspect-[4/3] rounded-[18px] overflow-hidden bg-gradient-to-br from-ink-600 to-ink-700 ring-1 ring-ink-900/60">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
