@@ -3,12 +3,17 @@
 // Auto-advances every 4.5s, pauses on hover/focus and when scrolled
 // off-screen, with manual dots for tap-to-jump and keyboard arrows
 // when focused.  Each screen falls back to a "drop your file here"
-// placeholder so the component renders cleanly before any WebPs are
-// added.  Drop screenshots in /public/pricing-studio/ matching the
-// `src` paths in the SCREENS array below.
+// placeholder so the component renders cleanly when an image is
+// missing from /public/pricing-studio/.
+//
+// Screen order, image paths, and captions live in
+// src/data/pricing-studio-screens.json — edit there to add, remove,
+// reorder, or rephrase. The component reads the manifest at build
+// time; no code changes needed for content edits.
 
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import manifest from '../data/pricing-studio-screens.json';
 
 type Screen = {
   src: string;
@@ -16,38 +21,7 @@ type Screen = {
   caption: string;
 };
 
-const SCREENS: Screen[] = [
-  {
-    src: '/pricing-studio/01-pricing-editor.webp',
-    alt: 'Live pricing editor showing per-tool prices and a diff against the live server',
-    caption:
-      'Live pricing editor — edit per-tool prices inline, diff against the live server before deploy.',
-  },
-  {
-    src: '/pricing-studio/02-constraint-pipeline.webp',
-    alt: 'Constraint pipeline builder with surge, happy-hour, and supply-cap steps',
-    caption:
-      'Constraint pipeline builder — surge windows, happy-hour discounts, supply caps, all visual.',
-  },
-  {
-    src: '/pricing-studio/03-campaign-interview.webp',
-    alt: 'Six-phase AI consultant interview screen',
-    caption:
-      'Six-phase pricing campaign interview — Claude as your AI MBA consultant.',
-  },
-  {
-    src: '/pricing-studio/04-grok-second-opinion.webp',
-    alt: 'Grok second-opinion review of a pricing proposal',
-    caption:
-      'Second opinion from Grok — independent review before you deploy.',
-  },
-  {
-    src: '/pricing-studio/05-account-statement.webp',
-    alt: 'Per-patron account statement infographic',
-    caption:
-      'Per-patron statement infographics — auditable, signed, shareable.',
-  },
-];
+const SCREENS: Screen[] = manifest.screens;
 
 const AUTO_ADVANCE_MS = 4500;
 
