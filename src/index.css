@@ -39,12 +39,18 @@
   transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 @media (min-width: 1024px) {
+  /* perspective() function inside the transform list — applies AT the
+     rotated element rather than relying on a CSS perspective property
+     on some ancestor (which doesn't survive intermediate divs without
+     transform-style: preserve-3d). With perspective baked into the
+     transform, the bezel AND the bitmap pixels inside the screen both
+     show proper foreshortening — no more flat-rectangle rotation. */
   .ipad-tilt {
-    transform: rotateY(-22deg) rotateX(6deg);
+    transform: perspective(1500px) rotateY(-22deg) rotateX(6deg);
   }
   .ipad-tilt:hover {
     /* Settle toward flat on hover so a curious viewer can read the
        screenshot squarely without it feeling locked-in. */
-    transform: rotateY(-6deg) rotateX(2deg);
+    transform: perspective(1500px) rotateY(-6deg) rotateX(2deg);
   }
 }
