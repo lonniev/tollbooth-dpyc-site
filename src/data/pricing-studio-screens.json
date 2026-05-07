@@ -1,39 +1,39 @@
 {
-  "build": "1.7.57",
+  "build": "1.8.0 (59)",
   "captured": "2026-05-07",
   "screens": [
     {
-      "src": "/pricing-studio/Studio Network_Topology 1.7.57.webp",
+      "src": "/pricing-studio/Studio Network_Topology 1.8.0-59.webp",
       "alt": "Network Topology view showing registered Authorities and Operators on the DPYC infrastructure",
       "caption": "Network Topology. Registered Authorities and Operators across the DPYC infrastructure, and how they relate."
     },
     {
-      "src": "/pricing-studio/Studio Patron_View 1.7.57.webp",
+      "src": "/pricing-studio/Studio Patron_View 1.8.0-59.webp",
       "alt": "Patron View showing credit balances, proof tokens, and active operator sessions",
       "caption": "Patron View. Credit balances, proof tokens, and active operator sessions — one identity per tab."
     },
     {
-      "src": "/pricing-studio/Studio Authority_View 1.7.57.webp",
+      "src": "/pricing-studio/Studio Authority_View 1.8.0-59.webp",
       "alt": "Authority View showing signed certificates and tax flow",
       "caption": "Authority View. Drill down on a registered Authority's signed certificates and tax flow."
     },
     {
-      "src": "/pricing-studio/Studio Operator_Pricing 1.7.57.webp",
+      "src": "/pricing-studio/Studio Operator_Pricing 1.8.0-59.webp",
       "alt": "Operator Pricing editor with per-tool prices and a diff against the live server",
       "caption": "Operator Pricing. Edit per-tool prices inline. Diff against the live server before you push."
     },
     {
-      "src": "/pricing-studio/Studio Campaign_View 1.7.57.webp",
+      "src": "/pricing-studio/Studio Campaign_View 1.8.0-59.webp",
       "alt": "Campaign View showing the six-phase Claude AI MBA consultant interview",
       "caption": "Campaign View. Six-phase pricing campaign interview with the Claude AI MBA consultant."
     },
     {
-      "src": "/pricing-studio/Studio Oracle_Help 1.7.57.webp",
+      "src": "/pricing-studio/Studio Oracle_Help 1.8.0-59.webp",
       "alt": "Oracle Help screen for joining DPYC and querying network resources",
       "caption": "Oracle Help. Community concierge — joining DPYC, querying tax rates, looking up members."
     },
     {
-      "src": "/pricing-studio/Studio Secure_Courier 1.7.57.webp",
+      "src": "/pricing-studio/Studio Secure_Courier 1.8.0-59.webp",
       "alt": "Secure Courier screen for exchanging credentials over Nostr-encrypted DMs",
       "caption": "Secure Courier. Operator and patron credentials exchanged over encrypted Nostr DMs."
     }

@@ -33,11 +33,22 @@ rm *.png *.PNG  # after confirming the WebPs look right
 
 ## Naming convention
 
-Filenames include the build number that produced the screenshots,
-e.g. `Studio Network_Topology 1.7.57.webp`. When you re-capture for a
-new build, name the new files with the new build number, update the
-`build` field in the manifest, and update the `src` paths to match.
-The old WebPs can stay or be deleted as you choose.
+Filenames include the build that produced the screenshots —
+`<MARKETING_VERSION>-<CFBundleVersion>` joined with a hyphen so the
+file path stays URL-clean. Example: `Studio Network_Topology 1.8.0-59.webp`
+(captured at marketing version 1.8.0, build 59).
+
+The manifest's `build` field uses the readable iOS form
+(`"1.8.0 (59)"`); the filenames use the URL-safe hyphenated form
+(`1.8.0-59`).
+
+When you re-capture for a new build:
+
+1. Rename or replace the WebPs with the new build suffix.
+2. Update the `build` field in the manifest.
+3. Update the `src` paths to match the new filenames.
+
+Old WebPs can stay or be removed as you choose.
 
 ## Manifest shape
 
