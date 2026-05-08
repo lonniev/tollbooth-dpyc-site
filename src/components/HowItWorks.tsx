@@ -49,8 +49,8 @@ export default function HowItWorks() {
           Generate Profit from your MCP without KYC
         </h2>
         <p className="mt-4 text-ink-100 max-w-readable">
-          Six rules, encoded in the wheel. The same on every Tollbooth DPYC™
-          deployment — you write only the domain code.
+          Security, Simplicity, Performance, Flexibility, Bitcoin, Profits —
+          all from open-source agent-ready Python FastMCP services.
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
