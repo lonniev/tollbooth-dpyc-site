@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="topGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#e1a730" stop-opacity="0.20"/>
+      <stop offset="55%" stop-color="#e1a730" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#e1a730" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rightGlow" cx="100%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e1a730" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#e1a730" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#100f0d"/>
+  <rect width="1200" height="630" fill="url(#topGlow)"/>
+  <rect width="1200" height="630" fill="url(#rightGlow)"/>
+
+  <!-- Top-left wordmark -->
+  <text x="80" y="80"
+        font-family="Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="600" fill="#a8a39a">
+    Tollbooth DPYC<tspan font-size="13" baseline-shift="super">™</tspan>
+  </text>
+
+  <!-- Eyebrow -->
+  <text x="80" y="208"
+        font-family="Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="24" font-weight="600" fill="#edbb4f" letter-spacing="3">
+    DON'T PESTER YOUR CUSTOMER™
+  </text>
+
+  <!-- Headline line 1 (light weight, ink-50) -->
+  <text x="80" y="316"
+        font-family="Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="84" font-weight="300" fill="#f5f4f0">
+    MCP Monetization for
+  </text>
+
+  <!-- Headline line 2 (semibold, brand gold) -->
+  <text x="80" y="412"
+        font-family="Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="84" font-weight="700" fill="#e1a730">
+    BTC Entrepreneurs
+  </text>
+
+  <!-- Subhead -->
+  <text x="80" y="488"
+        font-family="Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="34" font-weight="300" fill="#edbb4f">
+    Sound-money Commerce without KYC or KYT
+  </text>
+
+  <!-- Bottom-left: site URL -->
+  <text x="80" y="582"
+        font-family="Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="20" font-weight="500" fill="#dcd9d1">
+    tollbooth-dpyc.com
+  </text>
+
+  <!-- Bottom-right: meta line -->
+  <text x="1120" y="582"
+        font-family="Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="16" fill="#a8a39a" text-anchor="end">
+    Open source · Apache-2.0 · Patent Pending
+  </text>
+</svg>
