@@ -12,6 +12,7 @@
 
     <title>Tollbooth DPYC™ — MCP Monetization for BTC Entrepreneurs</title>
     <meta name="description" content="Don't Pester Your Customer™ — sound-money commerce without KYC or KYT. Pre-funded Bitcoin Lightning balances at the MCP tool layer. Open source, Apache-2.0, Patent Pending." />
+    <link rel="canonical" href="https://tollbooth-dpyc.com" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Tollbooth DPYC" />
@@ -25,10 +26,41 @@
     <meta property="og:image:alt" content="Tollbooth DPYC — MCP Monetization for BTC Entrepreneurs. Sound-money Commerce without KYC or KYT." />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <!-- TODO: replace with the X handle of the account that will be
+         posting tollbooth-dpyc.com URLs. X uses twitter:site to attach
+         the card to a verified domain owner; without it, rich cards
+         are sometimes suppressed for unfamiliar domains. -->
+    <meta name="twitter:site" content="@lonniev" />
     <meta name="twitter:title" content="Tollbooth DPYC™ — MCP Monetization for BTC Entrepreneurs" />
     <meta name="twitter:description" content="Sound-money commerce without KYC or KYT. Pre-funded Bitcoin Lightning at the MCP tool layer." />
     <meta name="twitter:image" content="https://tollbooth-dpyc.com/og-image.png" />
     <meta name="twitter:image:alt" content="Tollbooth DPYC — MCP Monetization for BTC Entrepreneurs. Sound-money Commerce without KYC or KYT." />
+
+    <!-- JSON-LD Organization + WebSite — structured data X / Slack /
+         Discord all read alongside OG. Some unfurl pipelines weight
+         JSON-LD higher than OG when both are present. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tollbooth DPYC",
+      "url": "https://tollbooth-dpyc.com",
+      "logo": "https://tollbooth-dpyc.com/og-image.png",
+      "description": "Don't Pester Your Customer — Bitcoin Lightning micropayments for MCP servers. Sound-money commerce without KYC or KYT.",
+      "sameAs": [
+        "https://github.com/lonniev/tollbooth-dpyc"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Tollbooth DPYC",
+      "url": "https://tollbooth-dpyc.com",
+      "description": "MCP Monetization for BTC Entrepreneurs. Pre-funded Bitcoin Lightning balances at the MCP tool layer."
+    }
+    </script>
   </head>
   <body class="bg-ink-700 text-ink-50 grain-overlay font-sans antialiased">
     <div id="root"></div>
