@@ -4,7 +4,31 @@ import { ArrowRight, Github } from 'lucide-react';
 export default function Hero() {
   return (
     <section className="hero-glow relative overflow-hidden">
-      <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 sm:pt-28 sm:pb-32">
+      {/* Lower-right artwork: DPYC mark + BTC coin. Hidden on small
+          screens so it never crowds the headline; absolutely
+          positioned so it doesn't push layout. */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+        aria-hidden="true"
+        className="pointer-events-none absolute right-6 bottom-6 hidden sm:flex items-end gap-6 lg:right-12 lg:bottom-10"
+      >
+        <motion.img
+          src="/btc-coin.svg"
+          alt=""
+          className="w-20 lg:w-28 drop-shadow-[0_8px_20px_rgba(247,147,26,0.45)]"
+          animate={{ y: [0, -6, 0], rotate: [0, 4, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <img
+          src="/dpyc-logo.png"
+          alt=""
+          className="w-40 lg:w-56 opacity-90 drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)]"
+        />
+      </motion.div>
+
+      <div className="relative mx-auto max-w-6xl px-6 pt-20 pb-24 sm:pt-28 sm:pb-32">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
