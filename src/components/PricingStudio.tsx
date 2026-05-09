@@ -14,7 +14,7 @@ export default function PricingStudio() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-brand-300 text-sm font-semibold tracking-widest uppercase mb-4 inline-flex items-center gap-2">
-              <Eye size={14} /> An AI MBA Assistant, Not a Web Page
+              <Eye size={14} /> Analyse a profitable pricing campaign with an AI MBA assistant
             </p>
             <h2 className="text-4xl sm:text-5xl font-light tracking-tight">
               Tollbooth Pricing Studio.
