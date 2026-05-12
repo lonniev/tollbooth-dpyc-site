@@ -40,7 +40,7 @@ export default function Hero() {
           </p>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight">
             MCP Monetization for{' '}
-            <span className="text-brand-400 font-semibold">BTC Entrepreneurs</span>
+            <span className="text-brand-400 font-semibold">Bitcoin Entrepreneurs</span>
           </h1>
           <p className="mt-8 text-xl text-ink-100 leading-relaxed max-w-readable">
             Sound-money Commerce without KYC or KYT.
