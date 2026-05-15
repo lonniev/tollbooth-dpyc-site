@@ -40,16 +40,16 @@ const steps = [
     body: 'Authorities certify Operators and collect a small ad valorem fee (default 2%, minimum 10 sats) on credit purchases. Ask the DPYC Oracle for an active Authority. Your sponsor registers your npub in the community registry, provisions your per-operator Neon schema with its own LOGIN role, optionally provisions a BTCPay store, and hands you the env vars you need.',
   },
   {
-    title: 'Clone tollbooth-sample, swap your env vars.',
-    body: 'The sample is the canonical reference — a working Open-Meteo weather MCP that wires every piece (OperatorRuntime, register_standard_tools, NeonVault, Secure Courier, Authority client) the way the wheel expects. Copy it, replace the domain logic, paste the values your Authority handed you (NEON_DATABASE_URL, BTCPAY_HOST, BTCPAY_API_KEY, BTCPAY_STORE_ID), and add your own TOLLBOOTH_NOSTR_OPERATOR_NSEC.',
+    title: 'Clone tollbooth-sample and deploy.',
+    body: 'The sample is the canonical reference — a working Open-Meteo weather MCP that wires every piece (OperatorRuntime, register_standard_tools, NeonVault, Secure Courier, Authority client) the way the wheel expects. Copy it, replace the domain logic, push to GitHub, connect at app.fastmcp.cloud (or self-host). One env var to boot: TOLLBOOTH_NOSTR_OPERATOR_NSEC. That is the entire deploy-time secret contract.',
   },
   {
-    title: 'Deploy to FastMCP Cloud.',
-    body: 'Push to GitHub, connect at app.fastmcp.cloud, paste env vars in the dashboard. Your MCP service is live with a stable URL within a minute. Self-hosted (Docker, systemd, bare metal) works the same — the env vars are the only contract.',
+    title: 'Receive your operator credentials via Secure Courier.',
+    body: 'With your MCP up, your Authority sends a Nostr DM containing your BTCPay credentials and your Neon connection string. You — the human — invoke request_credential_channel on the Authority to open the channel, then receive_credentials on your own MCP to ingest the reply into your vault (encrypted at rest with your nsec). No env var rotation, no redeploy. Want a new BTCPay store later? Same flow, same tools.',
   },
   {
     title: 'Onboard your first patron.',
-    body: 'Patrons exchange credentials with your service via Secure Courier — encrypted Nostr DMs. Patron calls request_credential_channel with their npub, replies to the welcome DM with their credentials, calls receive_credentials to activate. From then on, every paid tool call silently debits their pre-funded balance — no popups, no interruptions.',
+    body: 'Same Secure Courier mechanism, now with you on the receiving end. Patron calls request_credential_channel with their npub on your service, replies to the welcome DM with their credentials, calls receive_credentials to activate. From then on, every paid tool call silently debits their pre-funded balance — no popups, no interruptions.',
   },
 ];
 
@@ -91,10 +91,12 @@ export default function GettingStarted() {
             Ship a monetized MCP service before lunch.
           </h2>
           <p className="mt-6 text-ink-100 leading-relaxed max-w-readable">
-            Five steps from zero to a live, Lightning-monetized MCP service.
+            Six steps from zero to a live, Lightning-monetized MCP service.
             No middleware to integrate, no payments SDK to wire, no KYC flows
             to vet. The wheel handles identity, billing, rollback, and audit
-            — you bring the domain code and four env vars.
+            — you bring the domain code and exactly one env var
+            (your operator nsec). Every other secret arrives over Secure
+            Courier after the MCP is running.
           </p>
 
           {/* Prerequisites grid */}
@@ -113,7 +115,7 @@ export default function GettingStarted() {
           </div>
 
           {/* Numbered steps */}
-          <h3 className="mt-16 text-2xl font-semibold">Five steps</h3>
+          <h3 className="mt-16 text-2xl font-semibold">Six steps</h3>
           <ol className="mt-6 space-y-6">
             {steps.map((s, idx) => (
               <li
