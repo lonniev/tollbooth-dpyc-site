@@ -11,7 +11,7 @@ const prerequisites = [
   {
     icon: KeyRound,
     title: 'Nostr keypair',
-    body: 'Your Honor Chain identity (npub / nsec). Generate with `nak key generate` or any Nostr client.',
+    body: 'Your secure DPYC identity (npub / nsec). Generate with `nak key generate` or any Nostr client.',
   },
   {
     icon: Zap,
@@ -33,7 +33,7 @@ const prerequisites = [
 const steps = [
   {
     title: 'Generate a Nostr keypair.',
-    body: 'Save both halves. The npub goes into the community registry; the nsec becomes the TOLLBOOTH_NOSTR_OPERATOR_NSEC env var on your deployment. The npub is your identity on the Honor Chain — no email, no password, no KYC.',
+    body: 'Save both halves. The npub goes into the community registry; the nsec becomes the TOLLBOOTH_NOSTR_OPERATOR_NSEC env var on your deployment. The npub is your secure DPYC identity — no email, no password, no KYC.',
   },
   {
     title: 'Find a sponsor Authority.',
