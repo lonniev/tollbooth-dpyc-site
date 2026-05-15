@@ -26,7 +26,7 @@ const prerequisites = [
   {
     icon: Database,
     title: 'Neon Postgres database',
-    body: 'Persistent credit ledgers. Free tier at neon.tech is sufficient.',
+    body: 'Provisioned by your sponsor Authority — a per-operator schema with its own LOGIN role. Your ad valorem fee on each credit purchase compensates the Authority for this persistence service.',
   },
 ];
 
@@ -37,11 +37,11 @@ const steps = [
   },
   {
     title: 'Find a sponsor Authority.',
-    body: 'Authorities certify Operators and collect a small certification fee (default 2%, minimum 10 sats) on credit purchases. Ask the DPYC Oracle for an active Authority. Your sponsor registers your npub in the community registry, optionally provisions a BTCPay store, and gives you the credentials you need.',
+    body: 'Authorities certify Operators and collect a small ad valorem fee (default 2%, minimum 10 sats) on credit purchases. Ask the DPYC Oracle for an active Authority. Your sponsor registers your npub in the community registry, provisions your per-operator Neon schema with its own LOGIN role, optionally provisions a BTCPay store, and hands you the env vars you need.',
   },
   {
     title: 'Clone tollbooth-sample, swap your env vars.',
-    body: 'The sample is the canonical reference — a working Open-Meteo weather MCP that wires every piece (OperatorRuntime, register_standard_tools, NeonVault, Secure Courier, Authority client) the way the wheel expects. Copy it, replace the domain logic, set NEON_DATABASE_URL, BTCPAY_HOST, BTCPAY_API_KEY, BTCPAY_STORE_ID, TOLLBOOTH_NOSTR_OPERATOR_NSEC.',
+    body: 'The sample is the canonical reference — a working Open-Meteo weather MCP that wires every piece (OperatorRuntime, register_standard_tools, NeonVault, Secure Courier, Authority client) the way the wheel expects. Copy it, replace the domain logic, paste the values your Authority handed you (NEON_DATABASE_URL, BTCPAY_HOST, BTCPAY_API_KEY, BTCPAY_STORE_ID), and add your own TOLLBOOTH_NOSTR_OPERATOR_NSEC.',
   },
   {
     title: 'Deploy to FastMCP Cloud.',
@@ -141,11 +141,16 @@ export default function GettingStarted() {
             <p className="text-sm text-ink-100 leading-relaxed">
               When a patron buys credits, your service auto-requests a
               certificate from your Authority over MCP. The Authority deducts
-              its fee (default 2%, min 10 sats) from <em>its own</em> pre-funded
-              balance with the Prime Authority and returns a signed certificate.
-              Your service then creates a BTCPay invoice for the <strong>full</strong> amount
-              the patron requested. Patrons pay exactly what they asked for —
-              the fee is an Operator cost, paid silently behind the scenes.
+              its ad valorem fee (default 2%, min 10 sats) from{' '}
+              <em>its own</em> pre-funded balance with the Prime Authority and
+              returns a signed certificate. Your service then creates a BTCPay
+              invoice for the <strong>full</strong> amount the patron requested.
+              Patrons pay exactly what they asked for — the fee is an
+              Operator cost, paid silently behind the scenes. That fee is what
+              compensates the Authority for the services they provide you:
+              your per-operator Neon schema, certificate signing, BTCPay
+              hosting (when offered), and the registry membership that makes
+              your service discoverable.
             </p>
           </div>
 
