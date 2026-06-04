@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-05-06T01:37:25.017Z",
-  "registry_updated_at": "2026-05-06T01:36:59Z",
+  "fetched_at": "2026-06-04T19:00:50.592Z",
+  "registry_updated_at": "2026-05-23T22:41:30Z",
   "members": [
     {
       "npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
@@ -19,6 +19,22 @@
       "notes": "Founding Prime Authority of the DPYC Honor Chain"
     },
     {
+      "npub": "npub157hmysd6sw7m8kkldycnnc74mssxp9nweddk2p5sw9l2nktr950qyxrenn",
+      "role": "authority",
+      "status": "active",
+      "member_since": "2026-05-16",
+      "display_name": "Tollbooth Authority New England",
+      "services": [
+        {
+          "name": "tollbooth-authority-newengland",
+          "url": "https://tollbooth-authority-newengland.fastmcp.app/mcp",
+          "description": "DPYC Authority — New England sub-regional certifier"
+        }
+      ],
+      "upstream_authority_npub": "npub1zummm5awn88kw2hz6deeyjprpw0fzuv9rvzrxf3vu453yyqzvdss49xd2t",
+      "notes": "Sub-regional Authority for New England. Certified by Tollbooth-Authority-NorthAmerica. Identity re-generated 2026-05-16 after the original nsec was lost during onboarding."
+    },
+    {
       "npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
       "role": "authority",
       "status": "active",
@@ -33,6 +49,22 @@
       ],
       "upstream_authority_npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
       "notes": "Dedicated Authority identity for Tollbooth certificate signing"
+    },
+    {
+      "npub": "npub1zummm5awn88kw2hz6deeyjprpw0fzuv9rvzrxf3vu453yyqzvdss49xd2t",
+      "role": "authority",
+      "status": "active",
+      "member_since": "2026-05-16",
+      "display_name": "Tollbooth-Authority-NorthAmerica",
+      "services": [
+        {
+          "name": "tollbooth-authority-northamerica",
+          "url": "https://tollbooth-authority-northamerica.fastmcp.app/mcp",
+          "description": "DPYC Authority — North America regional certifier"
+        }
+      ],
+      "upstream_authority_npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
+      "notes": "Regional Authority for North America. Peer to Lonnie-Authority under the DPYC Prime Authority."
     },
     {
       "npub": "npub15e3ver3pskqsuqzszrp9mxpks7tqg7kedzyhmxfwlmu2jf8enaas86ll75",
@@ -65,6 +97,22 @@
       ],
       "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
       "notes": "Excalibur MCP Server — Social media operator"
+    },
+    {
+      "npub": "npub1qchpfnuw76gjmg6y9w4e5yaj9xcq97ft6rd49mj4j0vrsdrkujpqzl7tz0",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-05-23",
+      "display_name": "npub1qchpfnuw76g...",
+      "services": [
+        {
+          "name": "npub1qchpfnuw76g...",
+          "url": "https://optionality-mcp.fastmcp.app/mcp",
+          "description": "MCP Operator registered under Authority npub157hmysd6sw7..."
+        }
+      ],
+      "upstream_authority_npub": "npub157hmysd6sw7m8kkldycnnc74mssxp9nweddk2p5sw9l2nktr950qyxrenn",
+      "notes": "Registered via Authority-mediated operator registration protocol"
     },
     {
       "npub": "npub1sz60evcudpnaa9q9rmtnj9y4w6waz9vlt3p23hg82q3mlwu7y2xqem9rpl",

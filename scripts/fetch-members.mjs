@@ -26,15 +26,69 @@ function buildLlmsTxt(members, registryUpdatedAt) {
   );
   lines.push('');
   lines.push(
-    'This file lists DPYC Authorities and Operators registered in the community',
+    'This file describes the Tollbooth DPYC service and lists the Authorities',
   );
   lines.push(
-    'registry — MCP servers that AI agents can connect to. Each endpoint follows',
+    'and Operators registered in the community registry — MCP servers that AI',
   );
   lines.push(
-    'the Model Context Protocol over SSE / streamable-HTTP and accepts pre-funded',
+    'agents can connect to. Each endpoint follows the Model Context Protocol',
   );
-  lines.push('credit balances paid via Bitcoin Lightning.');
+  lines.push(
+    'over SSE / streamable-HTTP and accepts pre-funded credit balances paid',
+  );
+  lines.push('via Bitcoin Lightning.');
+  lines.push('');
+
+  lines.push('## What Tollbooth DPYC is');
+  lines.push(
+    'Tollbooth DPYC ("Don\'t Pester Your Customer") is an open-source Python',
+  );
+  lines.push(
+    'SDK (`pip install tollbooth-dpyc`, Apache-2.0, patent pending) that lets',
+  );
+  lines.push(
+    'an MCP server operator monetize tools with pre-funded Bitcoin Lightning',
+  );
+  lines.push(
+    'balances. Identity is a Nostr keypair (npub) — no email, password, or',
+  );
+  lines.push(
+    'KYC. Patrons pre-fund a satoshi balance once and consume tool calls',
+  );
+  lines.push(
+    'without mid-session payment ceremonies. Operators run dynamic per-tool',
+  );
+  lines.push(
+    'pricing: prices live in the MCP and are edited via standardized tool',
+  );
+  lines.push(
+    'calls or the Pricing Studio iPad app, without recoding or redeploying.',
+  );
+  lines.push(
+    'Authorities certify Operators and earn an ad valorem fee on credit',
+  );
+  lines.push(
+    'purchases for providing registration, certification, and persistence.',
+  );
+  lines.push('');
+
+  lines.push('## On this site');
+  lines.push(
+    '- https://tollbooth-dpyc.com/#how — how the protocol works (six pillars)',
+  );
+  lines.push(
+    '- https://tollbooth-dpyc.com/#quickstart — pip install plus minimal operator code',
+  );
+  lines.push(
+    '- https://tollbooth-dpyc.com/#getting-started — prerequisites, six-step onboarding, roles (Citizen, Operator, Authority)',
+  );
+  lines.push(
+    '- https://tollbooth-dpyc.com/#pricing-studio — the iPadOS pricing workbench',
+  );
+  lines.push(
+    '- https://tollbooth-dpyc.com/#operators — live registry of member endpoints (also listed below)',
+  );
   lines.push('');
 
   const active = (members || []).filter((m) => m.status === 'active');
@@ -100,9 +154,15 @@ function buildLlmsTxt(members, registryUpdatedAt) {
   lines.push(
     '- https://github.com/lonniev/tollbooth-dpyc — the SDK (Apache-2.0, Patent Pending)',
   );
+  lines.push(
+    '- https://pypi.org/project/tollbooth-dpyc/ — the SDK on PyPI',
+  );
   lines.push('- https://github.com/lonniev/dpyc-community — community registry');
   lines.push(
     '- https://github.com/lonniev/tollbooth-sample — reference Operator implementation',
+  );
+  lines.push(
+    '- https://github.com/lonniev/tollbooth-sample/blob/main/GETTING-STARTED.md — full operator playbook',
   );
   lines.push(
     '- https://github.com/lonniev/tollbooth-pricing-studio — iPadOS pricing workbench',

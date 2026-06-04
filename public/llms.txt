@@ -2,25 +2,48 @@
 
 > MCP Monetization for BTC Entrepreneurs. Sound-money commerce without KYC or KYT. Pre-funded Bitcoin Lightning balances at the MCP tool layer.
 
-This file lists DPYC Authorities and Operators registered in the community
-registry — MCP servers that AI agents can connect to. Each endpoint follows
-the Model Context Protocol over SSE / streamable-HTTP and accepts pre-funded
-credit balances paid via Bitcoin Lightning.
+This file describes the Tollbooth DPYC service and lists the Authorities
+and Operators registered in the community registry — MCP servers that AI
+agents can connect to. Each endpoint follows the Model Context Protocol
+over SSE / streamable-HTTP and accepts pre-funded credit balances paid
+via Bitcoin Lightning.
+
+## What Tollbooth DPYC is
+Tollbooth DPYC ("Don't Pester Your Customer") is an open-source Python
+SDK (`pip install tollbooth-dpyc`, Apache-2.0, patent pending) that lets
+an MCP server operator monetize tools with pre-funded Bitcoin Lightning
+balances. Identity is a Nostr keypair (npub) — no email, password, or
+KYC. Patrons pre-fund a satoshi balance once and consume tool calls
+without mid-session payment ceremonies. Operators run dynamic per-tool
+pricing: prices live in the MCP and are edited via standardized tool
+calls or the Pricing Studio iPad app, without recoding or redeploying.
+Authorities certify Operators and earn an ad valorem fee on credit
+purchases for providing registration, certification, and persistence.
+
+## On this site
+- https://tollbooth-dpyc.com/#how — how the protocol works (six pillars)
+- https://tollbooth-dpyc.com/#quickstart — pip install plus minimal operator code
+- https://tollbooth-dpyc.com/#getting-started — prerequisites, six-step onboarding, roles (Citizen, Operator, Authority)
+- https://tollbooth-dpyc.com/#pricing-studio — the iPadOS pricing workbench
+- https://tollbooth-dpyc.com/#operators — live registry of member endpoints (also listed below)
 
 ## Authorities
 - [Lonnie VanZandt](https://dpyc-oracle.fastmcp.app/mcp): DPYC Oracle - concierge for the Don't Pester Your Customer network state
+- [Tollbooth Authority New England](https://tollbooth-authority-newengland.fastmcp.app/mcp): DPYC Authority — New England sub-regional certifier
 - [Lonnie-Authority](https://tollbooth-authority.fastmcp.app/mcp): DPYC Authority — certificate signing and operator registration
+- [Tollbooth-Authority-NorthAmerica](https://tollbooth-authority-northamerica.fastmcp.app/mcp): DPYC Authority — North America regional certifier
 
 ## Operators
 - [schwab-mcp](https://schwab-mcp.fastmcp.app/mcp): Charles Schwab brokerage data via MCP with Tollbooth monetization
 - [Excalibur MCP](https://excalibur-mcp.fastmcp.app/mcp): Social media posting via MCP with Tollbooth monetization
+- [npub1qchpfnuw76g...](https://optionality-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7...
 - [npub1sz60evcudpn...](https://taxsort-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh...
 - [Tollbooth Sample](https://tollbooth-sample.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh...
 - [thebrain-mcp](https://personal-brain.fastmcp.app/mcp): TheBrain knowledge graph access via MCP
 
 ## Advocates (community utility services)
 - [OAuth2 Authorization Code Collector](https://tollbooth-oauth2-collector.fastmcp.app): Community OAuth2 code storage and retrieval via MCP tools
-- [OAuth2 Authorization Code Collector](https://tollbooth--9332e0141cea11f1af0b42dde27851f2.web.val.run): Serverless OAuth2 browser callback — receives GET redirects from OAuth providers
+- [OAuth2 Authorization Code Collector](https://tollbooth-dpyc-oauth.val.run): Serverless OAuth2 browser callback — receives GET redirects from OAuth providers
 - [Tollbooth Shortlinks](https://tollbooth-shortlinks.fastmcp.app/mcp): Community utility — ephemeral, human-friendly short URLs for OAuth flows and long URLs. 24-hour TTL, no tracking, no interstitials.
 
 ## How to connect
@@ -35,11 +58,13 @@ Free tools (`session_status`, `check_balance`, `check_oauth_status`, `check_proo
 
 ## Source
 - https://github.com/lonniev/tollbooth-dpyc — the SDK (Apache-2.0, Patent Pending)
+- https://pypi.org/project/tollbooth-dpyc/ — the SDK on PyPI
 - https://github.com/lonniev/dpyc-community — community registry
 - https://github.com/lonniev/tollbooth-sample — reference Operator implementation
+- https://github.com/lonniev/tollbooth-sample/blob/main/GETTING-STARTED.md — full operator playbook
 - https://github.com/lonniev/tollbooth-pricing-studio — iPadOS pricing workbench
 
 ## Site
 - https://tollbooth-dpyc.com
-- Registry updated 2026-05-06T01:36:59Z
-- Snapshot taken 2026-05-06T01:37:25.018Z
+- Registry updated 2026-05-23T22:41:30Z
+- Snapshot taken 2026-06-04T19:00:50.594Z
