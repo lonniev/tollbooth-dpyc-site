@@ -7,6 +7,7 @@ const repos = [
   { label: 'tollbooth-pricing-studio', url: 'https://github.com/lonniev/tollbooth-pricing-studio' },
   { label: 'tollbooth-authority', url: 'https://github.com/lonniev/tollbooth-authority' },
   { label: 'dpyc-oracle', url: 'https://github.com/lonniev/dpyc-oracle' },
+  { label: 'cypher-mcp', url: 'https://github.com/lonniev/cypher-mcp' },
 ];
 
 export default function Footer() {
