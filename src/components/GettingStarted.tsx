@@ -190,7 +190,7 @@ export default function GettingStarted() {
               </h3>
               <p className="text-sm text-ink-100 leading-relaxed">
                 Every step expanded — env-var reference, Authority discovery,
-                self-hosted vs sponsor BTCPay, deploying to FastMCP Cloud,
+                self-hosted vs sponsor BTCPay, deploying to Horizon,
                 onboarding patrons via Secure Courier, the full role / fee /
                 registration matrix.{' '}
                 <a
