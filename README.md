@@ -16,7 +16,7 @@ Live at **https://tollbooth-dpyc.com** (and `https://tollbooth-dpyc.org` redirec
 
 ```bash
 npm install
-npm run fetch:members   # pull live DPYC community registry into src/data/operators.json
+npm run fetch:members   # pull live DPYC community registry into src/data/operators.json (and regenerate public/llms.txt)
 npm run dev             # http://localhost:5173
 ```
 
@@ -57,11 +57,12 @@ The `.org` domain is in AWS Route 53. Cleanest setup is a redirect-only S3 bucke
 
 ## Editing the marketing copy
 
-Every component has a `[ ... TBD ]` comment marker where the placeholder copy lives.
-Search for `TBD` to find them all. Owner-voice rewrites land directly in the components —
-no CMS, no backend.
+Copy lives directly in the components under `src/components/` — no CMS, no backend.
+Owner-voice rewrites land straight in the component that renders the section.
 
-## Pricing Studio screenshot
+## Pricing Studio screenshots
 
-Drop a PNG (or video poster + Loom embed) at `public/pricing-studio.png` and update the
-placeholder in `src/components/PricingStudio.tsx`.
+The Pricing Studio section (`src/components/PricingStudio.tsx`) renders a screenshot
+carousel (`src/components/PricingStudioCarousel.tsx`). To add, remove, or reorder screens,
+edit the manifest at `src/data/pricing-studio-screens.json` and drop the matching image
+into `public/pricing-studio/`. The carousel renders cleanly when an image is missing.
