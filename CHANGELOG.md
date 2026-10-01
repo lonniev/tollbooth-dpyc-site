@@ -4,6 +4,15 @@ All notable changes to the tollbooth-dpyc marketing/docs site are documented
 here. This is a content site (no semantic version); entries are dated.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 2026-09-30
+
+- pricing-studio: add the official "Download on the App Store" badge, linked to the live listing (id6760925205)
+- quickstart: fix the snippet against SDK 0.97.0 — `ToolIdentity` requires `tool_id`; paid tools take `dpop_token` (not `proof`); `register_standard_tools` returns the slug decorator
+- copy: the certification fee is debited from the Operator's balance at its Authority, not the Authority's own
+- copy: credit expiry is the Operator's pricing choice; the SDK imposes none
+- copy: Getting Started lists five steps (said six); deploy on Horizon instead of app.fastmcp.cloud
+- registry: refresh snapshot + `llms.txt` (adds GoodEarth, ChartRemotely, BeesKnees)
+
 ## 2026-06-04
 
 - content: `llms.txt` now describes the service, not just the registry

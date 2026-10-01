@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-06-04T19:00:50.592Z",
-  "registry_updated_at": "2026-05-23T22:41:30Z",
+  "fetched_at": "2026-10-01T02:57:23.934Z",
+  "registry_updated_at": "2026-09-23T02:34:16Z",
   "members": [
     {
       "npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
@@ -67,6 +67,22 @@
       "notes": "Regional Authority for North America. Peer to Lonnie-Authority under the DPYC Prime Authority."
     },
     {
+      "npub": "npub14rkuqcl50cm7x507jhp3ryk7lghyucxwrjlrgaj6mlznhqh776hqws5gre",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-08-30",
+      "display_name": "GoodEarth MCP",
+      "services": [
+        {
+          "name": "GoodEarth MCP",
+          "url": "https://goodearth-mcp.fastmcp.app/mcp",
+          "description": "MCP Operator registered under Authority npub157hmysd6sw7..."
+        }
+      ],
+      "upstream_authority_npub": "npub157hmysd6sw7m8kkldycnnc74mssxp9nweddk2p5sw9l2nktr950qyxrenn",
+      "notes": "Registered via Authority-mediated operator registration protocol"
+    },
+    {
       "npub": "npub15e3ver3pskqsuqzszrp9mxpks7tqg7kedzyhmxfwlmu2jf8enaas86ll75",
       "role": "operator",
       "status": "active",
@@ -99,14 +115,46 @@
       "notes": "Excalibur MCP Server — Social media operator"
     },
     {
+      "npub": "npub1ajcnwx8l4kd89x7qquv33dhc4u5cdr2r35qfq4mgqh9r3alp8gtqfs46u0",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-07-02",
+      "display_name": "Tollbooth Fermyon",
+      "services": [
+        {
+          "name": "tollbooth-fermyon",
+          "url": "https://lonnies-mini.tailee8e94.ts.net/mcp",
+          "description": "Weather stats Operator on Spin/WASI — the edge port of tollbooth-sample, hosted by the tollbooth-wasmcp SpinOperatorHost. Full DPYC toolset (proof, Secure Courier, Lightning) running in WebAssembly."
+        }
+      ],
+      "upstream_authority_npub": "npub157hmysd6sw7m8kkldycnnc74mssxp9nweddk2p5sw9l2nktr950qyxrenn",
+      "notes": "Registered via Authority-mediated operator registration protocol. Spin/WASI implementation (tollbooth-wasmcp host); same operator source as tollbooth-sample. URL is the Tailscale funnel during development; intended production endpoint is https://fermyon.tollbooth-dpyc.com/mcp once the Akamai deploy is live."
+    },
+    {
+      "npub": "npub1jgy3m3wg0xu2vkfvff0stt9vae789qfd9k03wzqhl5aakasmy2dqw7w48f",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-09-23",
+      "display_name": "ChartRemotely MCP",
+      "services": [
+        {
+          "name": "ChartRemotely MCP",
+          "url": "https://chartremotely-mcp.fastmcp.app/mcp",
+          "description": "MCP Operator registered under Authority npub157hmysd6sw7..."
+        }
+      ],
+      "upstream_authority_npub": "npub157hmysd6sw7m8kkldycnnc74mssxp9nweddk2p5sw9l2nktr950qyxrenn",
+      "notes": "Registered via Authority-mediated operator registration protocol"
+    },
+    {
       "npub": "npub1qchpfnuw76gjmg6y9w4e5yaj9xcq97ft6rd49mj4j0vrsdrkujpqzl7tz0",
       "role": "operator",
       "status": "active",
       "member_since": "2026-05-23",
-      "display_name": "npub1qchpfnuw76g...",
+      "display_name": "optionality-mcp",
       "services": [
         {
-          "name": "npub1qchpfnuw76g...",
+          "name": "optionality-mcp",
           "url": "https://optionality-mcp.fastmcp.app/mcp",
           "description": "MCP Operator registered under Authority npub157hmysd6sw7..."
         }
@@ -119,15 +167,31 @@
       "role": "operator",
       "status": "active",
       "member_since": "2026-04-05",
-      "display_name": "npub1sz60evcudpn...",
+      "display_name": "taxsort-mcp",
       "services": [
         {
-          "name": "npub1sz60evcudpn...",
+          "name": "taxsort-mcp",
           "url": "https://taxsort-mcp.fastmcp.app/mcp",
           "description": "MCP Operator registered under Authority npub1fuhq0clgzhh..."
         }
       ],
       "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
+      "notes": "Registered via Authority-mediated operator registration protocol"
+    },
+    {
+      "npub": "npub1ue5pfah2c3z65h2kpkzxheajfh3y53l6rq9zhnth8v80uq5tressz0hpey",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-08-11",
+      "display_name": "Roastify MCP",
+      "services": [
+        {
+          "name": "Roastify MCP",
+          "url": "https://roastify-mcp.fastmcp.app/mcp",
+          "description": "MCP Operator registered under Authority npub1zummm5awn88..."
+        }
+      ],
+      "upstream_authority_npub": "npub1zummm5awn88kw2hz6deeyjprpw0fzuv9rvzrxf3vu453yyqzvdss49xd2t",
       "notes": "Registered via Authority-mediated operator registration protocol"
     },
     {
@@ -147,6 +211,22 @@
       "notes": "Registered via Authority-mediated operator registration protocol"
     },
     {
+      "npub": "npub1xdv5j2tf769s20wh3a0dj4hn6pms9vp7awnnd3fde8ata8fak7pqwg09av",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-06-17",
+      "display_name": "cypher-mcp",
+      "services": [
+        {
+          "name": "cypher-mcp",
+          "url": "https://cypher-mcp.fastmcp.app/mcp",
+          "description": "MCP Operator registered under Authority npub1zummm5awn88..."
+        }
+      ],
+      "upstream_authority_npub": "npub1zummm5awn88kw2hz6deeyjprpw0fzuv9rvzrxf3vu453yyqzvdss49xd2t",
+      "notes": "Registered via Authority-mediated operator registration protocol"
+    },
+    {
       "npub": "npub1y20qa7d3ddmh6730hdr0u0r08zys4p7pyk30uhur9edx4d88q4zqnr3q2h",
       "role": "operator",
       "status": "active",
@@ -161,6 +241,22 @@
       ],
       "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
       "notes": "First Tollbooth Operator — TheBrain MCP Server"
+    },
+    {
+      "npub": "npub1yp8zlyv88cmxazp5zl307s97dv6vszgrcgncpq8ulc4x7n33w33q2ke5jz",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-09-06",
+      "display_name": "BeesKnees MCP",
+      "services": [
+        {
+          "name": "BeesKnees MCP",
+          "url": "https://beesknees-mcp.fastmcp.app/mcp",
+          "description": "MCP Operator registered under Authority npub1zummm5awn88..."
+        }
+      ],
+      "upstream_authority_npub": "npub1zummm5awn88kw2hz6deeyjprpw0fzuv9rvzrxf3vu453yyqzvdss49xd2t",
+      "notes": "Registered via Authority-mediated operator registration protocol"
     },
     {
       "npub": "npub125zw84dlssyme5dddy4ck5tfqatsd5f7pvyn54ewmlmzrs3758dqghjypu",

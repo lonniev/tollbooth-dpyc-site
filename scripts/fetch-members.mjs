@@ -81,7 +81,7 @@ function buildLlmsTxt(members, registryUpdatedAt) {
     '- https://tollbooth-dpyc.com/#quickstart — pip install plus minimal operator code',
   );
   lines.push(
-    '- https://tollbooth-dpyc.com/#getting-started — prerequisites, six-step onboarding, roles (Citizen, Operator, Authority)',
+    '- https://tollbooth-dpyc.com/#getting-started — prerequisites, five-step onboarding, roles (Citizen, Operator, Authority)',
   );
   lines.push(
     '- https://tollbooth-dpyc.com/#pricing-studio — the iPadOS pricing workbench',

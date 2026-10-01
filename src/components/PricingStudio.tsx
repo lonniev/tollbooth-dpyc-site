@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { Eye } from 'lucide-react';
 import PricingStudioCarousel from './PricingStudioCarousel';
+import appStoreBadge from '../assets/app-store-badge.svg';
+
+const APP_STORE_URL = 'https://apps.apple.com/us/app/pricing-studio/id6760925205';
 
 export default function PricingStudio() {
   return (
@@ -39,6 +42,19 @@ export default function PricingStudio() {
               <li>— Second-opinion review from Grok before you deploy</li>
               <li>— Multi-identity Nostr DM channel for credentials and Authority claims</li>
             </ul>
+
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 inline-block transition-transform hover:scale-[1.03]"
+            >
+              <img
+                src={appStoreBadge}
+                alt="Download Pricing Studio on the App Store"
+                className="h-12 w-auto"
+              />
+            </a>
           </motion.div>
 
           <motion.div
