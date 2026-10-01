@@ -3,7 +3,11 @@
 //   - public/llms.txt — served at /llms.txt for AI agents that read llms.txt
 //     to discover MCP endpoints they can connect to (https://llmstxt.org/)
 //
-// Runs at `npm run build` (and on demand via `npm run fetch:members`).
+// Each service is joined to its product page in the MCPs collection
+// (mcps.tollbooth-dpyc.com) by endpoint URL — every product page names its
+// endpoint, so no hand-kept mapping is needed.
+//
+// Runs on demand via `npm run fetch:members`.
 // Failure is non-fatal — falls back to whatever is already on disk so
 // the build doesn't break when GitHub is having a moment.
 import { writeFileSync, readFileSync, existsSync } from 'fs';
@@ -16,6 +20,58 @@ const OUT_JSON = resolve(__dirname, '..', 'src', 'data', 'operators.json');
 const OUT_LLMS = resolve(__dirname, '..', 'public', 'llms.txt');
 const URL =
   'https://raw.githubusercontent.com/lonniev/dpyc-community/main/members/read-only-lookup-cache.json';
+const COLLECTION_URL = 'https://mcps.tollbooth-dpyc.com';
+const SHOP = 'https://cafe.tollbooth-dpyc.com';
+const PRODUCTS_URL = `${SHOP}/collections/mcps/products.json?limit=250`;
+
+const normalizeUrl = (u) => u.trim().toLowerCase().replace(/\/+$/, '');
+
+// endpoint URL → product page URL from the last snapshot, so a failed
+// collection fetch keeps the links we already had.
+function cachedProductPages() {
+  if (!existsSync(OUT_JSON)) return new Map();
+  const cached = JSON.parse(readFileSync(OUT_JSON, 'utf-8'));
+  const pages = new Map();
+  for (const m of cached.members ?? []) {
+    for (const svc of m.services ?? []) {
+      if (svc.url && svc.product_url) pages.set(normalizeUrl(svc.url), svc.product_url);
+    }
+  }
+  return pages;
+}
+
+// endpoint URL → product page URL. A service with no page links straight
+// to its endpoint.
+async function fetchProductPages() {
+  try {
+    const res = await fetch(PRODUCTS_URL, {
+      headers: { 'User-Agent': 'tollbooth-dpyc-site build (fetch-members.mjs)' },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const { products = [] } = await res.json();
+    const pages = new Map();
+    for (const p of products) {
+      const page = `${SHOP}/products/${p.handle}`;
+      for (const u of p.body_html?.match(/https:\/\/[^\s"'<>]+/g) ?? []) {
+        pages.set(normalizeUrl(u), page);
+      }
+    }
+    return pages;
+  } catch (err) {
+    console.warn(`MCPs collection fetch failed (${err.message}). Keeping the last snapshot's product links.`);
+    return cachedProductPages();
+  }
+}
+
+function withProductPages(members, pages) {
+  return members.map((m) => ({
+    ...m,
+    services: (m.services ?? []).map((svc) => {
+      const product_url = svc.url && pages.get(normalizeUrl(svc.url));
+      return product_url ? { ...svc, product_url } : svc;
+    }),
+  }));
+}
 
 function buildLlmsTxt(members, registryUpdatedAt) {
   const lines = [];
@@ -94,7 +150,10 @@ function buildLlmsTxt(members, registryUpdatedAt) {
   const active = (members || []).filter((m) => m.status === 'active');
   const byRole = (role) => active.filter((m) => m.role === role);
   const formatEntry = (svc, displayName) =>
-    `- [${displayName ?? svc.name ?? 'unnamed'}](${svc.url}): ${svc.description ?? ''}`.trim();
+    [
+      `- [${displayName ?? svc.name ?? 'unnamed'}](${svc.url}): ${svc.description ?? ''}`.trim(),
+      svc.product_url ? ` More: ${svc.product_url}` : '',
+    ].join('');
 
   const authorities = [...byRole('prime_authority'), ...byRole('authority')];
   if (authorities.length) {
@@ -142,7 +201,7 @@ function buildLlmsTxt(members, registryUpdatedAt) {
     '3. Pre-fund a credit balance via `purchase_credits` — pay the returned Lightning invoice.',
   );
   lines.push(
-    '4. Invoke any tool, passing the `proof_token` from step 2 as the `proof` parameter.',
+    '4. Invoke any tool, passing your `npub` and the `dpop_token` from step 2.',
   );
   lines.push('');
   lines.push(
@@ -170,6 +229,7 @@ function buildLlmsTxt(members, registryUpdatedAt) {
   lines.push('');
   lines.push('## Site');
   lines.push('- https://tollbooth-dpyc.com');
+  lines.push(`- ${COLLECTION_URL} — the MCPs collection: a page per service`);
   if (registryUpdatedAt) {
     lines.push(`- Registry updated ${registryUpdatedAt}`);
   }
@@ -187,10 +247,14 @@ async function main() {
     // The community cache wraps members[] in {version, updated_at, members}.
     // Pass through the upstream updated_at when available so the page can
     // show "registry updated <X>" rather than just "fetched at <Y>".
-    const members = Array.isArray(data.members) ? data.members : [];
+    const members = withProductPages(
+      Array.isArray(data.members) ? data.members : [],
+      await fetchProductPages(),
+    );
     const payload = {
       fetched_at: new Date().toISOString(),
       registry_updated_at: data.updated_at ?? null,
+      collection_url: COLLECTION_URL,
       members,
     };
     writeFileSync(OUT_JSON, JSON.stringify(payload, null, 2));

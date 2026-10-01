@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
-import { Plus } from 'lucide-react';
+import { ArrowRight, Plus } from 'lucide-react';
 import operatorsData from '../data/operators.json';
 
 type Service = {
   name?: string;
   url?: string;
+  product_url?: string;
   description?: string;
 };
 
@@ -18,9 +19,10 @@ type Member = {
   notes?: string;
 };
 
-const { fetched_at, registry_updated_at, members } = operatorsData as {
+const { fetched_at, registry_updated_at, collection_url, members } = operatorsData as {
   fetched_at: string | null;
   registry_updated_at?: string | null;
+  collection_url?: string;
   members: Member[];
 };
 
@@ -61,9 +63,19 @@ export default function LiveOperators() {
         </h2>
         <p className="mt-4 text-ink-100 max-w-readable">
           Currently registered in the DPYC™ community registry. Click any card
-          for its live MCP endpoint. Patrons do not register — only Authorities
-          and Operators do.
+          for the full story: what it does, what it costs, and how to connect.
+          Patrons do not register — only Authorities and Operators do.
         </p>
+        {collection_url && (
+          <a
+            href={collection_url}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-flex items-center gap-2 rounded-md border border-brand-400/60 px-5 py-2.5 font-semibold text-brand-300 transition-colors hover:border-brand-300 hover:text-brand-200"
+          >
+            Browse the MCP collection <ArrowRight size={16} />
+          </a>
+        )}
 
         {visible.length === 0 ? (
           <p className="mt-12 text-ink-200 italic">
@@ -74,7 +86,7 @@ export default function LiveOperators() {
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {visible.map((m, i) => {
               const primary = m.services?.[0];
-              const href = primary?.url;
+              const href = primary?.product_url ?? primary?.url;
               const Card = href ? motion.a : motion.div;
               return (
                 <Card
@@ -99,6 +111,11 @@ export default function LiveOperators() {
                   {primary?.description && (
                     <p className="text-sm text-ink-100 leading-relaxed">
                       {primary.description}
+                    </p>
+                  )}
+                  {primary?.product_url && (
+                    <p className="mt-3 text-sm font-semibold text-brand-300">
+                      Learn more →
                     </p>
                   )}
                 </Card>

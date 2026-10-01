@@ -1,6 +1,7 @@
 {
-  "fetched_at": "2026-10-01T02:57:23.934Z",
+  "fetched_at": "2026-10-01T03:24:26.539Z",
   "registry_updated_at": "2026-09-23T02:34:16Z",
+  "collection_url": "https://mcps.tollbooth-dpyc.com",
   "members": [
     {
       "npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
@@ -12,7 +13,8 @@
         {
           "name": "dpyc-oracle",
           "url": "https://dpyc-oracle.fastmcp.app/mcp",
-          "description": "DPYC Oracle - concierge for the Don't Pester Your Customer network state"
+          "description": "DPYC Oracle - concierge for the Don't Pester Your Customer network state",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/dpyc-oracle"
         }
       ],
       "upstream_authority_npub": null,
@@ -28,7 +30,8 @@
         {
           "name": "tollbooth-authority-newengland",
           "url": "https://tollbooth-authority-newengland.fastmcp.app/mcp",
-          "description": "DPYC Authority — New England sub-regional certifier"
+          "description": "DPYC Authority — New England sub-regional certifier",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/tollbooth-authority-new-england"
         }
       ],
       "upstream_authority_npub": "npub1zummm5awn88kw2hz6deeyjprpw0fzuv9rvzrxf3vu453yyqzvdss49xd2t",
@@ -44,7 +47,8 @@
         {
           "name": "tollbooth-authority",
           "url": "https://tollbooth-authority.fastmcp.app/mcp",
-          "description": "DPYC Authority — certificate signing and operator registration"
+          "description": "DPYC Authority — certificate signing and operator registration",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/tollbooth-authority"
         }
       ],
       "upstream_authority_npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
@@ -60,7 +64,8 @@
         {
           "name": "tollbooth-authority-northamerica",
           "url": "https://tollbooth-authority-northamerica.fastmcp.app/mcp",
-          "description": "DPYC Authority — North America regional certifier"
+          "description": "DPYC Authority — North America regional certifier",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/tollbooth-authority-north-america"
         }
       ],
       "upstream_authority_npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
@@ -76,7 +81,8 @@
         {
           "name": "GoodEarth MCP",
           "url": "https://goodearth-mcp.fastmcp.app/mcp",
-          "description": "MCP Operator registered under Authority npub157hmysd6sw7..."
+          "description": "MCP Operator registered under Authority npub157hmysd6sw7...",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/good-earth-mcp"
         }
       ],
       "upstream_authority_npub": "npub157hmysd6sw7m8kkldycnnc74mssxp9nweddk2p5sw9l2nktr950qyxrenn",
@@ -92,7 +98,8 @@
         {
           "name": "schwab-mcp",
           "url": "https://schwab-mcp.fastmcp.app/mcp",
-          "description": "Charles Schwab brokerage data via MCP with Tollbooth monetization"
+          "description": "Charles Schwab brokerage data via MCP with Tollbooth monetization",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/schwab-mcp"
         }
       ],
       "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
@@ -108,7 +115,8 @@
         {
           "name": "Excalibur MCP",
           "url": "https://excalibur-mcp.fastmcp.app/mcp",
-          "description": "Social media posting via MCP with Tollbooth monetization"
+          "description": "Social media posting via MCP with Tollbooth monetization",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/excalibur-mcp"
         }
       ],
       "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
@@ -124,7 +132,8 @@
         {
           "name": "tollbooth-fermyon",
           "url": "https://lonnies-mini.tailee8e94.ts.net/mcp",
-          "description": "Weather stats Operator on Spin/WASI — the edge port of tollbooth-sample, hosted by the tollbooth-wasmcp SpinOperatorHost. Full DPYC toolset (proof, Secure Courier, Lightning) running in WebAssembly."
+          "description": "Weather stats Operator on Spin/WASI — the edge port of tollbooth-sample, hosted by the tollbooth-wasmcp SpinOperatorHost. Full DPYC toolset (proof, Secure Courier, Lightning) running in WebAssembly.",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/tollbooth-fermyon"
         }
       ],
       "upstream_authority_npub": "npub157hmysd6sw7m8kkldycnnc74mssxp9nweddk2p5sw9l2nktr950qyxrenn",
@@ -140,7 +149,8 @@
         {
           "name": "ChartRemotely MCP",
           "url": "https://chartremotely-mcp.fastmcp.app/mcp",
-          "description": "MCP Operator registered under Authority npub157hmysd6sw7..."
+          "description": "MCP Operator registered under Authority npub157hmysd6sw7...",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/chartremotely-mcp"
         }
       ],
       "upstream_authority_npub": "npub157hmysd6sw7m8kkldycnnc74mssxp9nweddk2p5sw9l2nktr950qyxrenn",
@@ -156,7 +166,8 @@
         {
           "name": "optionality-mcp",
           "url": "https://optionality-mcp.fastmcp.app/mcp",
-          "description": "MCP Operator registered under Authority npub157hmysd6sw7..."
+          "description": "MCP Operator registered under Authority npub157hmysd6sw7...",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/optionality-mcp"
         }
       ],
       "upstream_authority_npub": "npub157hmysd6sw7m8kkldycnnc74mssxp9nweddk2p5sw9l2nktr950qyxrenn",
@@ -172,7 +183,8 @@
         {
           "name": "taxsort-mcp",
           "url": "https://taxsort-mcp.fastmcp.app/mcp",
-          "description": "MCP Operator registered under Authority npub1fuhq0clgzhh..."
+          "description": "MCP Operator registered under Authority npub1fuhq0clgzhh...",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/taxsort-mcp"
         }
       ],
       "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
@@ -188,7 +200,8 @@
         {
           "name": "Roastify MCP",
           "url": "https://roastify-mcp.fastmcp.app/mcp",
-          "description": "MCP Operator registered under Authority npub1zummm5awn88..."
+          "description": "MCP Operator registered under Authority npub1zummm5awn88...",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/roastify-mcp"
         }
       ],
       "upstream_authority_npub": "npub1zummm5awn88kw2hz6deeyjprpw0fzuv9rvzrxf3vu453yyqzvdss49xd2t",
@@ -204,7 +217,8 @@
         {
           "name": "Tollbooth Sample",
           "url": "https://tollbooth-sample.fastmcp.app/mcp",
-          "description": "MCP Operator registered under Authority npub1fuhq0clgzhh..."
+          "description": "MCP Operator registered under Authority npub1fuhq0clgzhh...",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/tollbooth-sample"
         }
       ],
       "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
@@ -220,7 +234,8 @@
         {
           "name": "cypher-mcp",
           "url": "https://cypher-mcp.fastmcp.app/mcp",
-          "description": "MCP Operator registered under Authority npub1zummm5awn88..."
+          "description": "MCP Operator registered under Authority npub1zummm5awn88...",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/cypher-mcp"
         }
       ],
       "upstream_authority_npub": "npub1zummm5awn88kw2hz6deeyjprpw0fzuv9rvzrxf3vu453yyqzvdss49xd2t",
@@ -236,7 +251,8 @@
         {
           "name": "thebrain-mcp",
           "url": "https://personal-brain.fastmcp.app/mcp",
-          "description": "TheBrain knowledge graph access via MCP"
+          "description": "TheBrain knowledge graph access via MCP",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/personal-brain-mcp"
         }
       ],
       "upstream_authority_npub": "npub1fuhq0clgzhhkuhywe8c5c5hdnnkzlhedesy6e35x2aucz6xy9c6s6mhv7z",
@@ -252,7 +268,8 @@
         {
           "name": "BeesKnees MCP",
           "url": "https://beesknees-mcp.fastmcp.app/mcp",
-          "description": "MCP Operator registered under Authority npub1zummm5awn88..."
+          "description": "MCP Operator registered under Authority npub1zummm5awn88...",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/beesknees-mcp"
         }
       ],
       "upstream_authority_npub": "npub1zummm5awn88kw2hz6deeyjprpw0fzuv9rvzrxf3vu453yyqzvdss49xd2t",
@@ -268,12 +285,14 @@
         {
           "name": "tollbooth-oauth2-collector",
           "url": "https://tollbooth-oauth2-collector.fastmcp.app",
-          "description": "Community OAuth2 code storage and retrieval via MCP tools"
+          "description": "Community OAuth2 code storage and retrieval via MCP tools",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/oauth2-authorization-code-collector"
         },
         {
           "name": "tollbooth-oauth2-callback",
           "url": "https://tollbooth-dpyc-oauth.val.run",
-          "description": "Serverless OAuth2 browser callback — receives GET redirects from OAuth providers"
+          "description": "Serverless OAuth2 browser callback — receives GET redirects from OAuth providers",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/oauth2-authorization-code-collector"
         }
       ],
       "upstream_authority_npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
@@ -289,7 +308,8 @@
         {
           "name": "tollbooth-shortlinks",
           "url": "https://tollbooth-shortlinks.fastmcp.app/mcp",
-          "description": "Community utility — ephemeral, human-friendly short URLs for OAuth flows and long URLs. 24-hour TTL, no tracking, no interstitials."
+          "description": "Community utility — ephemeral, human-friendly short URLs for OAuth flows and long URLs. 24-hour TTL, no tracking, no interstitials.",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/tollbooth-shortlinks"
         }
       ],
       "upstream_authority_npub": "npub1l94pd4qu4eszrl6ek032ftcnsu3tt9a7xvq2zp7eaxeklp6mrpzssmq8pf",
