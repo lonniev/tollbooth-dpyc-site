@@ -41,7 +41,7 @@ const steps = [
   },
   {
     title: 'Clone tollbooth-sample and deploy.',
-    body: 'The sample is the canonical reference — a working Open-Meteo weather MCP that wires every piece (OperatorRuntime, register_standard_tools, NeonVault, Secure Courier, Authority client) the way the wheel expects. Copy it, replace the domain logic, push to GitHub, connect at app.fastmcp.cloud (or self-host). One env var to boot: TOLLBOOTH_NOSTR_OPERATOR_NSEC. That is the entire deploy-time secret contract.',
+    body: 'The sample is the canonical reference — a working Open-Meteo weather MCP that wires every piece (OperatorRuntime, register_standard_tools, NeonVault, Secure Courier, Authority client) the way the wheel expects. Copy it, replace the domain logic, push to GitHub, connect it on Horizon (prefect.horizon.io), or self-host. One env var to boot: TOLLBOOTH_NOSTR_OPERATOR_NSEC. That is the entire deploy-time secret contract.',
   },
   {
     title: 'Receive your operator credentials via Secure Courier.',
@@ -91,7 +91,7 @@ export default function GettingStarted() {
             Ship a monetized MCP service before lunch.
           </h2>
           <p className="mt-6 text-ink-100 leading-relaxed max-w-readable">
-            Six steps from zero to a live, Lightning-monetized MCP service.
+            Five steps from zero to a live, Lightning-monetized MCP service.
             No middleware to integrate, no payments SDK to wire, no KYC flows
             to vet. The wheel handles identity, billing, rollback, and audit
             — you bring the domain code and exactly one env var
@@ -115,7 +115,7 @@ export default function GettingStarted() {
           </div>
 
           {/* Numbered steps */}
-          <h3 className="mt-16 text-2xl font-semibold">Six steps</h3>
+          <h3 className="mt-16 text-2xl font-semibold">Five steps</h3>
           <ol className="mt-6 space-y-6">
             {steps.map((s, idx) => (
               <li
@@ -144,8 +144,9 @@ export default function GettingStarted() {
               When a patron buys credits, your service auto-requests a
               certificate from your Authority over MCP. The Authority deducts
               its ad valorem fee (default 2%, min 10 sats) from{' '}
-              <em>its own</em> pre-funded balance with the Prime Authority and
-              returns a signed certificate. Your service then creates a BTCPay
+              <em>your</em> pre-funded balance held at the Authority and
+              returns a signed certificate — so keep that balance topped up
+              with the Authority's purchase_credits. Your service then creates a BTCPay
               invoice for the <strong>full</strong> amount the patron requested.
               Patrons pay exactly what they asked for — the fee is an
               Operator cost, paid silently behind the scenes. That fee is what

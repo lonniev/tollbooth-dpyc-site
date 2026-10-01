@@ -10,14 +10,16 @@ from tollbooth.runtime import OperatorRuntime, register_standard_tools
 from tollbooth.tool_identity import (
     ToolIdentity, STANDARD_IDENTITIES, capability_uuid,
 )
-from tollbooth.slug_tools import make_slug_tool
 
 mcp = FastMCP("my-mcp")
-tool = make_slug_tool(mcp, "my")  # tools become my_<name>
 
-# Domain tools, registered by UUID-derived ToolIdentity.tool_id
+# Freeze each tool's UUID once, at birth. Renaming the function later
+# never orphans its price.
+GET_WEATHER = capability_uuid("get_weather")
+
 DOMAIN = [
     ToolIdentity(
+        tool_id=GET_WEATHER,
         capability="get_weather",
         category="read",
         intent="Current weather for a coordinate.",
@@ -31,12 +33,13 @@ runtime = OperatorRuntime(
 )
 
 # Standard tools — check_balance, purchase_credits, Secure Courier,
-# proof exchange, pricing, onboarding — all from the wheel.
-register_standard_tools(mcp, "my", runtime, service_name="my-mcp")
+# proof exchange, pricing, onboarding — all from the wheel. Returns
+# the slug decorator: your tools become my_<name>.
+tool = register_standard_tools(mcp, "my", runtime, service_name="my-mcp")
 
 @tool
-@runtime.paid_tool(capability_uuid("get_weather"))
-async def get_weather(lat: float, lon: float, npub: str = "", proof: str = ""):
+@runtime.paid_tool(GET_WEATHER)
+async def get_weather(lat: float, lon: float, npub: str = "", dpop_token: str = ""):
     return await weather.get(lat, lon)`;
 
 export default function Quickstart() {

@@ -23,7 +23,7 @@ purchases for providing registration, certification, and persistence.
 ## On this site
 - https://tollbooth-dpyc.com/#how — how the protocol works (six pillars)
 - https://tollbooth-dpyc.com/#quickstart — pip install plus minimal operator code
-- https://tollbooth-dpyc.com/#getting-started — prerequisites, six-step onboarding, roles (Citizen, Operator, Authority)
+- https://tollbooth-dpyc.com/#getting-started — prerequisites, five-step onboarding, roles (Citizen, Operator, Authority)
 - https://tollbooth-dpyc.com/#pricing-studio — the iPadOS pricing workbench
 - https://tollbooth-dpyc.com/#operators — live registry of member endpoints (also listed below)
 
@@ -34,12 +34,18 @@ purchases for providing registration, certification, and persistence.
 - [Tollbooth-Authority-NorthAmerica](https://tollbooth-authority-northamerica.fastmcp.app/mcp): DPYC Authority — North America regional certifier
 
 ## Operators
+- [GoodEarth MCP](https://goodearth-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7...
 - [schwab-mcp](https://schwab-mcp.fastmcp.app/mcp): Charles Schwab brokerage data via MCP with Tollbooth monetization
 - [Excalibur MCP](https://excalibur-mcp.fastmcp.app/mcp): Social media posting via MCP with Tollbooth monetization
-- [npub1qchpfnuw76g...](https://optionality-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7...
-- [npub1sz60evcudpn...](https://taxsort-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh...
+- [Tollbooth Fermyon](https://lonnies-mini.tailee8e94.ts.net/mcp): Weather stats Operator on Spin/WASI — the edge port of tollbooth-sample, hosted by the tollbooth-wasmcp SpinOperatorHost. Full DPYC toolset (proof, Secure Courier, Lightning) running in WebAssembly.
+- [ChartRemotely MCP](https://chartremotely-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7...
+- [optionality-mcp](https://optionality-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7...
+- [taxsort-mcp](https://taxsort-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh...
+- [Roastify MCP](https://roastify-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1zummm5awn88...
 - [Tollbooth Sample](https://tollbooth-sample.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh...
+- [cypher-mcp](https://cypher-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1zummm5awn88...
 - [thebrain-mcp](https://personal-brain.fastmcp.app/mcp): TheBrain knowledge graph access via MCP
+- [BeesKnees MCP](https://beesknees-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1zummm5awn88...
 
 ## Advocates (community utility services)
 - [OAuth2 Authorization Code Collector](https://tollbooth-oauth2-collector.fastmcp.app): Community OAuth2 code storage and retrieval via MCP tools
@@ -66,5 +72,5 @@ Free tools (`session_status`, `check_balance`, `check_oauth_status`, `check_proo
 
 ## Site
 - https://tollbooth-dpyc.com
-- Registry updated 2026-05-23T22:41:30Z
-- Snapshot taken 2026-06-04T19:00:50.594Z
+- Registry updated 2026-09-23T02:34:16Z
+- Snapshot taken 2026-10-01T02:57:23.935Z
