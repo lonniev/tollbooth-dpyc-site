@@ -4,6 +4,13 @@ All notable changes to the tollbooth-dpyc marketing/docs site are documented
 here. This is a content site (no semantic version); entries are dated.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 2026-10-01
+
+- operators: each card links to its page in the MCPs collection (mcps.tollbooth-dpyc.com), joined by endpoint URL at fetch time; "Browse the MCP collection" button added; a service with no page still links to its endpoint
+- llms.txt: each entry names its collection page; the collection is listed under Site
+- llms.txt: "How to connect" step 4 passes `npub` + `dpop_token` (said `proof_token` as `proof`)
+- fetch-members: a failed collection fetch keeps the last snapshot's links; header comment no longer claims it runs during `npm run build`
+
 ## 2026-09-30
 
 - pricing-studio: add the official "Download on the App Store" badge, linked to the live listing (id6760925205)

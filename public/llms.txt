@@ -28,29 +28,29 @@ purchases for providing registration, certification, and persistence.
 - https://tollbooth-dpyc.com/#operators — live registry of member endpoints (also listed below)
 
 ## Authorities
-- [Lonnie VanZandt](https://dpyc-oracle.fastmcp.app/mcp): DPYC Oracle - concierge for the Don't Pester Your Customer network state
-- [Tollbooth Authority New England](https://tollbooth-authority-newengland.fastmcp.app/mcp): DPYC Authority — New England sub-regional certifier
-- [Lonnie-Authority](https://tollbooth-authority.fastmcp.app/mcp): DPYC Authority — certificate signing and operator registration
-- [Tollbooth-Authority-NorthAmerica](https://tollbooth-authority-northamerica.fastmcp.app/mcp): DPYC Authority — North America regional certifier
+- [Lonnie VanZandt](https://dpyc-oracle.fastmcp.app/mcp): DPYC Oracle - concierge for the Don't Pester Your Customer network state More: https://cafe.tollbooth-dpyc.com/products/dpyc-oracle
+- [Tollbooth Authority New England](https://tollbooth-authority-newengland.fastmcp.app/mcp): DPYC Authority — New England sub-regional certifier More: https://cafe.tollbooth-dpyc.com/products/tollbooth-authority-new-england
+- [Lonnie-Authority](https://tollbooth-authority.fastmcp.app/mcp): DPYC Authority — certificate signing and operator registration More: https://cafe.tollbooth-dpyc.com/products/tollbooth-authority
+- [Tollbooth-Authority-NorthAmerica](https://tollbooth-authority-northamerica.fastmcp.app/mcp): DPYC Authority — North America regional certifier More: https://cafe.tollbooth-dpyc.com/products/tollbooth-authority-north-america
 
 ## Operators
-- [GoodEarth MCP](https://goodearth-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7...
-- [schwab-mcp](https://schwab-mcp.fastmcp.app/mcp): Charles Schwab brokerage data via MCP with Tollbooth monetization
-- [Excalibur MCP](https://excalibur-mcp.fastmcp.app/mcp): Social media posting via MCP with Tollbooth monetization
-- [Tollbooth Fermyon](https://lonnies-mini.tailee8e94.ts.net/mcp): Weather stats Operator on Spin/WASI — the edge port of tollbooth-sample, hosted by the tollbooth-wasmcp SpinOperatorHost. Full DPYC toolset (proof, Secure Courier, Lightning) running in WebAssembly.
-- [ChartRemotely MCP](https://chartremotely-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7...
-- [optionality-mcp](https://optionality-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7...
-- [taxsort-mcp](https://taxsort-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh...
-- [Roastify MCP](https://roastify-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1zummm5awn88...
-- [Tollbooth Sample](https://tollbooth-sample.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh...
-- [cypher-mcp](https://cypher-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1zummm5awn88...
-- [thebrain-mcp](https://personal-brain.fastmcp.app/mcp): TheBrain knowledge graph access via MCP
-- [BeesKnees MCP](https://beesknees-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1zummm5awn88...
+- [GoodEarth MCP](https://goodearth-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7... More: https://cafe.tollbooth-dpyc.com/products/good-earth-mcp
+- [schwab-mcp](https://schwab-mcp.fastmcp.app/mcp): Charles Schwab brokerage data via MCP with Tollbooth monetization More: https://cafe.tollbooth-dpyc.com/products/schwab-mcp
+- [Excalibur MCP](https://excalibur-mcp.fastmcp.app/mcp): Social media posting via MCP with Tollbooth monetization More: https://cafe.tollbooth-dpyc.com/products/excalibur-mcp
+- [Tollbooth Fermyon](https://lonnies-mini.tailee8e94.ts.net/mcp): Weather stats Operator on Spin/WASI — the edge port of tollbooth-sample, hosted by the tollbooth-wasmcp SpinOperatorHost. Full DPYC toolset (proof, Secure Courier, Lightning) running in WebAssembly. More: https://cafe.tollbooth-dpyc.com/products/tollbooth-fermyon
+- [ChartRemotely MCP](https://chartremotely-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7... More: https://cafe.tollbooth-dpyc.com/products/chartremotely-mcp
+- [optionality-mcp](https://optionality-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub157hmysd6sw7... More: https://cafe.tollbooth-dpyc.com/products/optionality-mcp
+- [taxsort-mcp](https://taxsort-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh... More: https://cafe.tollbooth-dpyc.com/products/taxsort-mcp
+- [Roastify MCP](https://roastify-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1zummm5awn88... More: https://cafe.tollbooth-dpyc.com/products/roastify-mcp
+- [Tollbooth Sample](https://tollbooth-sample.fastmcp.app/mcp): MCP Operator registered under Authority npub1fuhq0clgzhh... More: https://cafe.tollbooth-dpyc.com/products/tollbooth-sample
+- [cypher-mcp](https://cypher-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1zummm5awn88... More: https://cafe.tollbooth-dpyc.com/products/cypher-mcp
+- [thebrain-mcp](https://personal-brain.fastmcp.app/mcp): TheBrain knowledge graph access via MCP More: https://cafe.tollbooth-dpyc.com/products/personal-brain-mcp
+- [BeesKnees MCP](https://beesknees-mcp.fastmcp.app/mcp): MCP Operator registered under Authority npub1zummm5awn88... More: https://cafe.tollbooth-dpyc.com/products/beesknees-mcp
 
 ## Advocates (community utility services)
-- [OAuth2 Authorization Code Collector](https://tollbooth-oauth2-collector.fastmcp.app): Community OAuth2 code storage and retrieval via MCP tools
-- [OAuth2 Authorization Code Collector](https://tollbooth-dpyc-oauth.val.run): Serverless OAuth2 browser callback — receives GET redirects from OAuth providers
-- [Tollbooth Shortlinks](https://tollbooth-shortlinks.fastmcp.app/mcp): Community utility — ephemeral, human-friendly short URLs for OAuth flows and long URLs. 24-hour TTL, no tracking, no interstitials.
+- [OAuth2 Authorization Code Collector](https://tollbooth-oauth2-collector.fastmcp.app): Community OAuth2 code storage and retrieval via MCP tools More: https://cafe.tollbooth-dpyc.com/products/oauth2-authorization-code-collector
+- [OAuth2 Authorization Code Collector](https://tollbooth-dpyc-oauth.val.run): Serverless OAuth2 browser callback — receives GET redirects from OAuth providers More: https://cafe.tollbooth-dpyc.com/products/oauth2-authorization-code-collector
+- [Tollbooth Shortlinks](https://tollbooth-shortlinks.fastmcp.app/mcp): Community utility — ephemeral, human-friendly short URLs for OAuth flows and long URLs. 24-hour TTL, no tracking, no interstitials. More: https://cafe.tollbooth-dpyc.com/products/tollbooth-shortlinks
 
 ## How to connect
 Each server in this list speaks MCP. To call a paid tool on any of them:
@@ -58,7 +58,7 @@ Each server in this list speaks MCP. To call a paid tool on any of them:
 1. Identify yourself with a Nostr `npub` (public key).
 2. Establish ownership via `request_npub_proof` / `receive_npub_proof` — a Nostr DM challenge bound to your application session.
 3. Pre-fund a credit balance via `purchase_credits` — pay the returned Lightning invoice.
-4. Invoke any tool, passing the `proof_token` from step 2 as the `proof` parameter.
+4. Invoke any tool, passing your `npub` and the `dpop_token` from step 2.
 
 Free tools (`session_status`, `check_balance`, `check_oauth_status`, `check_proof_status`, `request_npub_proof`, `receive_npub_proof`, `purchase_credits`, `check_payment`) never require credits.
 
@@ -72,5 +72,6 @@ Free tools (`session_status`, `check_balance`, `check_oauth_status`, `check_proo
 
 ## Site
 - https://tollbooth-dpyc.com
+- https://mcps.tollbooth-dpyc.com — the MCPs collection: a page per service
 - Registry updated 2026-09-23T02:34:16Z
-- Snapshot taken 2026-10-01T02:57:23.935Z
+- Snapshot taken 2026-10-01T03:24:26.543Z
