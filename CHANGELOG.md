@@ -6,6 +6,9 @@ Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## 2026-10-01
 
+- getting-started step 4: the operator calls `request_credential_channel` on its OWN MCP and replies with its BTCPay credentials (said the Authority DMs them, and that the tool is called on the Authority); the Neon connection is not couriered — the Authority publishes it encrypted to the operator npub at adoption; names `request_adoption`
+- getting-started step 5: a patron proves an npub (`request_npub_proof` / `receive_npub_proof`) and buys credits (said every patron couriers credentials); patron credentials only where the operator declares a template
+- getting-started step 2 + intro: the Authority hands over no env vars; a sponsor-hosted BTCPay store is an offer, not a registration side effect
 - operators: each card links to its page in the MCPs collection (mcps.tollbooth-dpyc.com), joined by endpoint URL at fetch time; "Browse the MCP collection" button added; a service with no page still links to its endpoint
 - llms.txt: each entry names its collection page; the collection is listed under Site
 - llms.txt: "How to connect" step 4 passes `npub` + `dpop_token` (said `proof_token` as `proof`)
