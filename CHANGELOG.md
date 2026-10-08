@@ -4,6 +4,8 @@ All notable changes to the tollbooth-dpyc marketing/docs site are documented
 here. This is a content site (no semantic version); entries are dated.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+Changes not yet released live in `changelog.d/`, one file per change — see the README there for why, and `scripts/changelog.py` for what folds them in at release time.
+
 ## 2026-10-01
 
 - operators: each card links to its page in the MCPs collection (mcps.tollbooth-dpyc.com), joined by endpoint URL at fetch time; "Browse the MCP collection" button added; a service with no page still links to its endpoint
