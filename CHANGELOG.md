@@ -12,7 +12,6 @@ Changes not yet released live in `changelog.d/`, one file per change — see the
 - llms.txt: each entry names its collection page; the collection is listed under Site
 - llms.txt: "How to connect" step 4 passes `npub` + `dpop_token` (said `proof_token` as `proof`)
 - fetch-members: a failed collection fetch keeps the last snapshot's links; header comment no longer claims it runs during `npm run build`
-- tooling: `npm run lint` works again — adds an ESLint 9 flat config (`eslint.config.js`) with typescript-eslint and the React hooks/refresh plugins; the script is now `eslint .` (the old `--ext` form had no config to read and failed before linting anything)
 
 ## 2026-09-30
 
