@@ -4,6 +4,8 @@ All notable changes to the tollbooth-dpyc marketing/docs site are documented
 here. This is a content site (no semantic version); entries are dated.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+Changes not yet released live in `changelog.d/`, one file per change — see the README there for why, and `scripts/changelog.py` for what folds them in at release time.
+
 ## 2026-10-01
 
 - getting-started step 4: the operator calls `request_credential_channel` on its OWN MCP and replies with its BTCPay credentials (said the Authority DMs them, and that the tool is called on the Authority); the Neon connection is not couriered — the Authority publishes it encrypted to the operator npub at adoption; names `request_adoption`
