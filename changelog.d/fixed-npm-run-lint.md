@@ -1,0 +1,1 @@
+- tooling: `npm run lint` works again — adds an ESLint 9 flat config (`eslint.config.js`) with typescript-eslint and the React hooks/refresh plugins; the script is now `eslint .` (the old `--ext` form had no config to read and failed before linting anything)
