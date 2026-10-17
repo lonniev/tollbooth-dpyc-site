@@ -1,0 +1,3 @@
+- getting-started step 4: the operator calls `request_credential_channel` on its OWN MCP and replies with its BTCPay credentials (said the Authority DMs them, and that the tool is called on the Authority); the Neon connection is not couriered — the Authority publishes it encrypted to the operator npub at adoption; names `request_adoption`
+- getting-started step 5: a patron proves an npub (`request_npub_proof` / `receive_npub_proof`) and buys credits (said every patron couriers credentials); patron credentials only where the operator declares a template
+- getting-started step 2 + intro: the Authority hands over no env vars; a sponsor-hosted BTCPay store is an offer, not a registration side effect

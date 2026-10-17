@@ -37,19 +37,19 @@ const steps = [
   },
   {
     title: 'Find a sponsor Authority.',
-    body: 'Authorities certify Operators and collect a small ad valorem fee (default 2%, minimum 10 sats) on credit purchases. Ask the DPYC Oracle for an active Authority. Your sponsor registers your npub in the community registry, provisions your per-operator Neon schema with its own LOGIN role, optionally provisions a BTCPay store, and hands you the env vars you need.',
+    body: 'Authorities certify Operators and collect a small ad valorem fee (default 2%, minimum 10 sats) on credit purchases. Ask the DPYC Oracle for an active Authority and note its npub. When it adopts you (step 4), it registers your npub in the community registry and provisions your per-operator Neon schema with its own LOGIN role. Some sponsors also host a BTCPay store for you; otherwise you bring your own.',
   },
   {
     title: 'Clone tollbooth-sample and deploy.',
     body: 'The sample is the canonical reference — a working Open-Meteo weather MCP that wires every piece (OperatorRuntime, register_standard_tools, NeonVault, Secure Courier, Authority client) the way the wheel expects. Copy it, replace the domain logic, push to GitHub, connect it on Horizon (prefect.horizon.io), or self-host. One env var to boot: TOLLBOOTH_NOSTR_OPERATOR_NSEC. That is the entire deploy-time secret contract.',
   },
   {
-    title: 'Receive your operator credentials via Secure Courier.',
-    body: 'With your MCP up, your Authority sends a Nostr DM containing your BTCPay credentials and your Neon connection string. You — the human — invoke request_credential_channel on the Authority to open the channel, then receive_credentials on your own MCP to ingest the reply into your vault (encrypted at rest with your nsec). No env var rotation, no redeploy. Want a new BTCPay store later? Same flow, same tools.',
+    title: 'Get adopted, then hand your MCP its BTCPay credentials.',
+    body: "With your MCP up, call request_adoption on it, naming your Authority. Once the Authority's owner approves, the Authority publishes your Neon connection to Nostr relays, encrypted to your npub, and your MCP picks it up using only its nsec — you never see or set a connection string. BTCPay is the one thing you deliver yourself, over Secure Courier: you — the human — call request_credential_channel on your own MCP, reply from your Nostr client to the DM it sends you with your BTCPay host, API key and store ID, then call receive_credentials to vault them (encrypted at rest with your nsec). No env var rotation, no redeploy. Want a new BTCPay store later? Same flow, same tools.",
   },
   {
     title: 'Onboard your first patron.',
-    body: 'Same Secure Courier mechanism, now with you on the receiving end. Patron calls request_credential_channel with their npub on your service, replies to the welcome DM with their credentials, calls receive_credentials to activate. From then on, every paid tool call silently debits their pre-funded balance — no popups, no interruptions.',
+    body: "A patron needs only a Nostr npub. They call request_npub_proof on your service, reply to the DM it sends from their Nostr client, then call receive_npub_proof to get a proof token for their later calls. purchase_credits returns a Lightning invoice and check_payment confirms it. From then on, every paid tool call silently debits their pre-funded balance — no popups, no interruptions. If your service needs a secret of the patron's own (an upstream API key, say), declare a patron credential template and Secure Courier collects it the same way.",
   },
 ];
 
@@ -95,8 +95,9 @@ export default function GettingStarted() {
             No middleware to integrate, no payments SDK to wire, no KYC flows
             to vet. The wheel handles identity, billing, rollback, and audit
             — you bring the domain code and exactly one env var
-            (your operator nsec). Every other secret arrives over Secure
-            Courier after the MCP is running.
+            (your operator nsec). Your Authority wires the database, and
+            your BTCPay keys go in over Secure Courier after the MCP is
+            running.
           </p>
 
           {/* Prerequisites grid */}
@@ -192,7 +193,7 @@ export default function GettingStarted() {
               <p className="text-sm text-ink-100 leading-relaxed">
                 Every step expanded — env-var reference, Authority discovery,
                 self-hosted vs sponsor BTCPay, deploying to Horizon,
-                onboarding patrons via Secure Courier, the full role / fee /
+                onboarding patrons, the full role / fee /
                 registration matrix.{' '}
                 <a
                   href="https://github.com/lonniev/tollbooth-sample/blob/main/GETTING-STARTED.md"
