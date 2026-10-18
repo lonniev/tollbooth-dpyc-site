@@ -39,7 +39,7 @@ tool = register_standard_tools(mcp, "my", runtime, service_name="my-mcp")
 
 @tool
 @runtime.paid_tool(GET_WEATHER)
-async def get_weather(lat: float, lon: float, npub: str = "", dpop_token: str = ""):
+async def get_weather(lat: float, lon: float, npub: str = ""):
     return await weather.get(lat, lon)`;
 
 export default function Quickstart() {
