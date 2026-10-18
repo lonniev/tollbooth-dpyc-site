@@ -195,13 +195,13 @@ function buildLlmsTxt(members, registryUpdatedAt) {
   lines.push('');
   lines.push('1. Identify yourself with a Nostr `npub` (public key).');
   lines.push(
-    '2. Establish ownership via `request_npub_proof` / `receive_npub_proof` — a Nostr DM challenge bound to your application session.',
+    "2. Prove ownership on your connection: sign each request with the npub's key (NIP-98), or connect with OAuth and prove it once via `request_npub_proof` / `receive_npub_proof` — a Nostr DM challenge.",
   );
   lines.push(
     '3. Pre-fund a credit balance via `purchase_credits` — pay the returned Lightning invoice.',
   );
   lines.push(
-    '4. Invoke any tool, passing your `npub` and the `dpop_token` from step 2.',
+    '4. Invoke any tool, passing your `npub`.',
   );
   lines.push('');
   lines.push(

@@ -1,0 +1,1 @@
+- The quickstart and llms.txt describe proving an npub on the connection; paid tools take only `npub`.

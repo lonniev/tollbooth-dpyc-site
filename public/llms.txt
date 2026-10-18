@@ -56,9 +56,9 @@ purchases for providing registration, certification, and persistence.
 Each server in this list speaks MCP. To call a paid tool on any of them:
 
 1. Identify yourself with a Nostr `npub` (public key).
-2. Establish ownership via `request_npub_proof` / `receive_npub_proof` — a Nostr DM challenge bound to your application session.
+2. Prove ownership on your connection: sign each request with the npub's key (NIP-98), or connect with OAuth and prove it once via `request_npub_proof` / `receive_npub_proof` — a Nostr DM challenge.
 3. Pre-fund a credit balance via `purchase_credits` — pay the returned Lightning invoice.
-4. Invoke any tool, passing your `npub` and the `dpop_token` from step 2.
+4. Invoke any tool, passing your `npub`.
 
 Free tools (`session_status`, `check_balance`, `check_oauth_status`, `check_proof_status`, `request_npub_proof`, `receive_npub_proof`, `purchase_credits`, `check_payment`) never require credits.
 
