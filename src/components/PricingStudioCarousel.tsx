@@ -100,7 +100,7 @@ export default function PricingStudioCarousel() {
           around the active panel). The .ipad-tilt class applies the
           3D rotation above lg, flat on mobile. */}
       <div
-        className="ipad-tilt relative rounded-[28px] bg-gradient-to-b from-zinc-200 to-zinc-400 p-2.5 sm:p-3 ring-1 ring-zinc-500/30"
+        className="ipad-tilt relative rounded-[28px] bg-linear-to-b from-zinc-200 to-zinc-400 p-2.5 sm:p-3 ring-1 ring-zinc-500/30"
         style={{
           boxShadow:
             '0 50px 80px -30px rgba(0, 0, 0, 0.7), 0 25px 40px -20px rgba(225, 167, 48, 0.10)',
@@ -108,7 +108,7 @@ export default function PricingStudioCarousel() {
       >
         <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-ink-900/80" />
 
-        <div className="relative aspect-[2816/1940] rounded-[18px] overflow-hidden bg-gradient-to-br from-ink-600 to-ink-700 ring-1 ring-ink-900/60">
+        <div className="relative aspect-2816/1940 rounded-[18px] overflow-hidden bg-linear-to-br from-ink-600 to-ink-700 ring-1 ring-ink-900/60">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}

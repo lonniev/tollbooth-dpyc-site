@@ -1,6 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* The theme (brand and ink palettes, fonts, typography plugin) stays in the JS config. */
+@config '../tailwind.config.js';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Tailwind 4 changed two defaults; keep v3's so the page looks the same. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 /* Subtle grain overlay — tradeodds-style depth without a heavy texture file.
    Pure SVG turbulence, ~600 bytes inlined. */
