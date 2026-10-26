@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Eye } from 'lucide-react';
 import PricingStudioCarousel from './PricingStudioCarousel';
 import appStoreBadge from '../assets/app-store-badge.svg';

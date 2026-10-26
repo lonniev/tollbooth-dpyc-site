@@ -14,7 +14,7 @@
 // obscured. Body text styles match the rest of the site.
 
 import { useEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import manifest from '../data/pricing-studio-screens.json';
 
 type Screen = {

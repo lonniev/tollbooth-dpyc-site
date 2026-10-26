@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { ArrowRight, Plus } from 'lucide-react';
 import operatorsData from '../data/operators.json';
 
