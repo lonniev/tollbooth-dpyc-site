@@ -1,0 +1,1 @@
+- The site runs on React 19, Tailwind 4, Vite 8 and motion 14; the look is unchanged.

@@ -108,7 +108,7 @@ const FastMCPLogo = () => (
 type StackItem = {
   name: string;
   url: string;
-  Logo: () => JSX.Element;
+  Logo: () => React.JSX.Element;
 };
 
 const stack: StackItem[] = [

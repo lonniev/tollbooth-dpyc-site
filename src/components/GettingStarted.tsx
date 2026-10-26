@@ -123,7 +123,7 @@ export default function GettingStarted() {
                 key={s.title}
                 className="rounded-lg border border-ink-400/40 bg-ink-700/40 p-6 flex gap-5"
               >
-                <div className="flex-shrink-0 flex items-start">
+                <div className="shrink-0 flex items-start">
                   <span className="font-mono text-3xl font-light text-brand-400 leading-none">
                     {idx + 1}
                   </span>
@@ -185,7 +185,7 @@ export default function GettingStarted() {
 
           {/* CTA: full guide */}
           <div className="mt-12 rounded-lg border border-ink-400/40 bg-ink-700/60 p-6 flex items-start gap-4">
-            <FileText className="text-brand-400 flex-shrink-0 mt-0.5" size={28} />
+            <FileText className="text-brand-400 shrink-0 mt-0.5" size={28} />
             <div>
               <h3 className="font-semibold mb-1 text-lg">
                 The full operator playbook

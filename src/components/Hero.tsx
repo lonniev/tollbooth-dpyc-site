@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Github } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import GithubMark from './GithubMark';
 
 export default function Hero() {
   return (
@@ -59,7 +60,7 @@ export default function Hero() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-md border border-ink-300 px-6 py-3 font-semibold text-ink-50 transition-colors hover:border-brand-400 hover:text-brand-300"
             >
-              <Github size={18} /> GitHub
+              <GithubMark size={18} /> GitHub
             </a>
           </div>
         </motion.div>

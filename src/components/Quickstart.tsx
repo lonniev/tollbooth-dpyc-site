@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { Copy, Github } from 'lucide-react';
+import { Copy } from 'lucide-react';
+import GithubMark from './GithubMark';
 import { useState } from 'react';
 
 const SNIPPET = `pip install tollbooth-dpyc
@@ -96,7 +97,7 @@ export default function Quickstart() {
           </p>
 
           <div className="mt-12 rounded-lg border border-brand-400/40 bg-ink-800/60 p-6 flex items-start gap-4">
-            <Github className="text-brand-400 flex-shrink-0 mt-0.5" size={28} />
+            <GithubMark className="text-brand-400 shrink-0 mt-0.5" size={28} />
             <div>
               <h3 className="font-semibold mb-1 text-lg">
                 Open source. Apache-2.0.
