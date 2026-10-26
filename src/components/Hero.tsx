@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { ArrowRight, Github } from 'lucide-react';
 
 export default function Hero() {
