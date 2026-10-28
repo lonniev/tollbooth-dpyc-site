@@ -41,7 +41,7 @@ const steps = [
   },
   {
     title: 'Clone tollbooth-sample and deploy.',
-    body: 'The sample is the canonical reference — a working Open-Meteo weather MCP that wires every piece (OperatorRuntime, register_standard_tools, NeonVault, Secure Courier, Authority client) the way the wheel expects. Copy it, replace the domain logic, push to GitHub, connect it on Horizon (prefect.horizon.io), or self-host. One env var to boot: TOLLBOOTH_NOSTR_OPERATOR_NSEC. That is the entire deploy-time secret contract.',
+    body: 'The sample is the canonical reference — a working Open-Meteo weather MCP that wires every piece (OperatorRuntime, register_standard_tools, NeonVault, Secure Courier, Authority client) the way the wheel expects. Copy it, replace the domain logic, push to GitHub, connect it on Horizon (horizon.prefect.io), or self-host. One env var to boot: TOLLBOOTH_NOSTR_OPERATOR_NSEC. That is the entire deploy-time secret contract.',
   },
   {
     title: 'Get adopted, then hand your MCP its BTCPay credentials.',
@@ -49,7 +49,7 @@ const steps = [
   },
   {
     title: 'Onboard your first patron.',
-    body: "A patron needs only a Nostr npub. They call request_npub_proof on your service, reply to the DM it sends from their Nostr client, then call receive_npub_proof to get a proof token for their later calls. purchase_credits returns a Lightning invoice and check_payment confirms it. From then on, every paid tool call silently debits their pre-funded balance — no popups, no interruptions. If your service needs a secret of the patron's own (an upstream API key, say), declare a patron credential template and Secure Courier collects it the same way.",
+    body: "A patron needs only a Nostr npub. Their app either signs each request with the npub's own key, or connects once and calls request_npub_proof; the patron replies to the DM from their Nostr client, and receive_npub_proof puts the npub on that connection for as long as they chose — two hours by default, up to thirty days. purchase_credits returns a Lightning invoice and check_payment confirms it. From then on, every paid tool call silently debits their pre-funded balance — no popups, no interruptions. If your service needs a secret of the patron's own (an upstream API key, say), declare a patron credential template and Secure Courier collects it the same way.",
   },
 ];
 

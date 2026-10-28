@@ -148,6 +148,9 @@ function buildLlmsTxt(members, registryUpdatedAt) {
   lines.push('');
 
   const active = (members || []).filter((m) => m.status === 'active');
+  // Only endpoints an agent can connect to. A `transport: http` service (the
+  // OAuth browser callback, a GET to POST bridge) is not an MCP server.
+  const isMcp = (svc) => Boolean(svc.url) && (svc.transport ?? 'mcp') === 'mcp';
   const byRole = (role) => active.filter((m) => m.role === role);
   const formatEntry = (svc, displayName) =>
     [
@@ -160,7 +163,7 @@ function buildLlmsTxt(members, registryUpdatedAt) {
     lines.push('## Authorities');
     for (const m of authorities) {
       for (const svc of m.services ?? []) {
-        if (svc.url) lines.push(formatEntry(svc, m.display_name));
+        if (isMcp(svc)) lines.push(formatEntry(svc, m.display_name));
       }
     }
     lines.push('');
@@ -171,7 +174,7 @@ function buildLlmsTxt(members, registryUpdatedAt) {
     lines.push('## Operators');
     for (const m of operators) {
       for (const svc of m.services ?? []) {
-        if (svc.url) lines.push(formatEntry(svc, m.display_name));
+        if (isMcp(svc)) lines.push(formatEntry(svc, m.display_name));
       }
     }
     lines.push('');
@@ -182,7 +185,7 @@ function buildLlmsTxt(members, registryUpdatedAt) {
     lines.push('## Advocates (community utility services)');
     for (const m of advocates) {
       for (const svc of m.services ?? []) {
-        if (svc.url) lines.push(formatEntry(svc, m.display_name));
+        if (isMcp(svc)) lines.push(formatEntry(svc, m.display_name));
       }
     }
     lines.push('');

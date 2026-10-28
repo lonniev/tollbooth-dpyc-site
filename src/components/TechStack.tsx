@@ -6,7 +6,7 @@
 // - BTCPay Server — official btcpayserver.org logo, recolored to
 //   currentColor for monochrome use
 // - Nostr — typographic "n" with antenna dot; community-style mark
-// - Wallet of Satoshi — clean wordmark with sat-symbol motif
+// - Phoenix — wordmark
 // - FastMCP — wordmark (no public logo)
 
 const ICON_CLS = 'h-6 w-auto fill-current';
@@ -88,13 +88,10 @@ const NostrLogo = () => (
   </svg>
 );
 
-// Wallet of Satoshi — wordmark style with a small sat (₿-flavored)
-// mark; their actual brand is a yellow circle, which doesn't read
-// monochrome. Wordmark scales to the strip's tone.
-const WalletOfSatoshiLogo = () => (
-  <span className="font-mono text-ink-200 text-sm tracking-tight">
-    Wallet of Satoshi
-  </span>
+// Phoenix — the self-custodial Lightning wallet, as a wordmark that
+// takes the strip's tone.
+const PhoenixLogo = () => (
+  <span className="font-mono text-ink-200 text-sm tracking-tight">Phoenix</span>
 );
 
 const FastMCPLogo = () => (
@@ -115,7 +112,7 @@ const stack: StackItem[] = [
   { name: 'Bitcoin', url: 'https://bitcoin.org', Logo: BitcoinLogo },
   { name: 'Lightning Network', url: 'https://lightning.network', Logo: LightningLogo },
   { name: 'BTCPay Server', url: 'https://btcpayserver.org', Logo: BTCPayServerLogo },
-  { name: 'Wallet of Satoshi', url: 'https://walletofsatoshi.com', Logo: WalletOfSatoshiLogo },
+  { name: 'Phoenix', url: 'https://phoenix.acinq.co', Logo: PhoenixLogo },
   { name: 'Nostr', url: 'https://nostr.com', Logo: NostrLogo },
   { name: 'Python', url: 'https://python.org', Logo: PythonLogo },
   { name: 'FastMCP', url: 'https://gofastmcp.com', Logo: FastMCPLogo },

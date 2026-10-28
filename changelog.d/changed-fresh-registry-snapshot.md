@@ -1,0 +1,1 @@
+- Operator cards and llms.txt carry the registry's fresh descriptions and names, and leave out members not serving. llms.txt lists only MCP endpoints an agent can connect to.
