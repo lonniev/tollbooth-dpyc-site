@@ -1,0 +1,3 @@
+- The site says how identity works today: each request is signed with the npub's key, or carried on a connection the patron approved by Nostr DM. The proof-of-possession and proof-token wording is gone.
+- The Quickstart sample runs as printed: `ToolIdentity` gets the `title` and `behavior` the SDK now requires, and `npub` is a `PatronNpub`.
+- Phoenix replaces Wallet of Satoshi in the stack, and the Horizon link is `horizon.prefect.io`.

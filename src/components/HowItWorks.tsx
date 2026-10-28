@@ -12,7 +12,7 @@ const steps = [
   {
     icon: KeyRound,
     title: 'Identity is a secure npub. Nothing more.',
-    body: 'A Nostr public key, plus a signed challenge to prove it. No email, no password, no KYC. The npub is the only thing the Operator ever sees. Proof is temporally granted to a specific agent session via demonstrated proof of possession — permission to act on behalf of the human cannot be hijacked by MITM rogues.',
+    body: "A Nostr public key is the whole identity. No email, no password, no KYC. The npub is the only thing the Operator ever sees. Each request proves it one of two ways: signed with the npub's own key, or carried on a connection the patron approved by replying to a Nostr DM, for as long as they chose.",
   },
   {
     icon: Wallet,

@@ -7,9 +7,10 @@ const SNIPPET = `pip install tollbooth-dpyc
 
 # server.py
 from fastmcp import FastMCP
+from tollbooth.params import PatronNpub
 from tollbooth.runtime import OperatorRuntime, register_standard_tools
 from tollbooth.tool_identity import (
-    ToolIdentity, STANDARD_IDENTITIES, capability_uuid,
+    READS_REMOTE, STANDARD_IDENTITIES, ToolIdentity, capability_uuid,
 )
 
 mcp = FastMCP("my-mcp")
@@ -23,6 +24,8 @@ DOMAIN = [
         tool_id=GET_WEATHER,
         capability="get_weather",
         category="read",
+        title="Current weather",
+        behavior=READS_REMOTE,
         intent="Current weather for a coordinate.",
     ),
 ]
@@ -40,7 +43,7 @@ tool = register_standard_tools(mcp, "my", runtime, service_name="my-mcp")
 
 @tool
 @runtime.paid_tool(GET_WEATHER)
-async def get_weather(lat: float, lon: float, npub: str = ""):
+async def get_weather(lat: float, lon: float, npub: PatronNpub = ""):
     return await weather.get(lat, lon)`;
 
 export default function Quickstart() {
