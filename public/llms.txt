@@ -35,7 +35,7 @@ purchases for providing registration, certification, and persistence.
 
 ## Operators
 - [GoodEarth MCP](https://goodearth-mcp.fastmcp.app/mcp): Climate analytics for small specialty-crop and flower farms: frost, heat, rain, daylight and planting windows, read for each plot you farm. More: https://cafe.tollbooth-dpyc.com/products/good-earth-mcp
-- [Schwab MCP](https://schwab-mcp.fastmcp.app/mcp): Charles Schwab brokerage data via MCP with Tollbooth monetization More: https://cafe.tollbooth-dpyc.com/products/schwab-mcp
+- [Schwab MCP](https://schwab-mcp.fastmcp.app/mcp): Charles Schwab brokerage data for AI agents: quotes, option chains, price history, positions, balances and order history from your own Schwab account. More: https://cafe.tollbooth-dpyc.com/products/schwab-mcp
 - [Excalibur MCP](https://excalibur-mcp.fastmcp.app/mcp): Posting to X and Nostr for AI agents: scheduled posts, live dynamic blocks resolved at send time, and post performance. More: https://cafe.tollbooth-dpyc.com/products/excalibur-mcp
 - [ChartRemotely MCP](https://chartremotely-mcp.fastmcp.app/mcp): Puts a security on your own desktop trading chart from anywhere, by voice or tool call, through a small agent on your Mac, and sends back a snapshot of what it shows. More: https://cafe.tollbooth-dpyc.com/products/chartremotely-mcp
 - [Optionality MCP](https://optionality-mcp.fastmcp.app/mcp): An AI-judged options-trading drill: the Firm composes an opportunity, you pitch a trade, and a judge model scores it on five dimensions with a Facts Ledger. More: https://cafe.tollbooth-dpyc.com/products/optionality-mcp
@@ -71,5 +71,5 @@ Free tools (`session_status`, `check_balance`, `check_oauth_status`, `check_proo
 ## Site
 - https://tollbooth-dpyc.com
 - https://mcps.tollbooth-dpyc.com — the MCPs collection: a page per service
-- Registry updated 2026-10-28T12:41:39Z
-- Snapshot taken 2026-10-28T13:12:31.986Z
+- Registry updated 2026-10-28T14:44:44Z
+- Snapshot taken 2026-10-28T14:46:03.969Z

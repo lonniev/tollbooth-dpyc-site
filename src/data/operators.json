@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-10-28T13:12:31.983Z",
-  "registry_updated_at": "2026-10-28T12:41:39Z",
+  "fetched_at": "2026-10-28T14:46:03.966Z",
+  "registry_updated_at": "2026-10-28T14:44:44Z",
   "collection_url": "https://mcps.tollbooth-dpyc.com",
   "members": [
     {
@@ -98,7 +98,7 @@
         {
           "name": "schwab-mcp",
           "url": "https://schwab-mcp.fastmcp.app/mcp",
-          "description": "Charles Schwab brokerage data via MCP with Tollbooth monetization",
+          "description": "Charles Schwab brokerage data for AI agents: quotes, option chains, price history, positions, balances and order history from your own Schwab account.",
           "product_url": "https://cafe.tollbooth-dpyc.com/products/schwab-mcp"
         }
       ],

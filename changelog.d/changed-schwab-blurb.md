@@ -1,0 +1,1 @@
+- Schwab MCP's card and llms.txt entry carry its fresh description.
