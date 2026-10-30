@@ -1,0 +1,1 @@
+- The operator list and `llms.txt` include FieldData MCP.

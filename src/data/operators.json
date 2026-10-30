@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-10-28T14:46:03.966Z",
-  "registry_updated_at": "2026-10-28T14:44:44Z",
+  "fetched_at": "2026-10-30T17:55:47.817Z",
+  "registry_updated_at": "2026-10-30T17:40:20Z",
   "collection_url": "https://mcps.tollbooth-dpyc.com",
   "members": [
     {
@@ -273,6 +273,23 @@
         }
       ],
       "upstream_authority_npub": "npub1zummm5awn88kw2hz6deeyjprpw0fzuv9rvzrxf3vu453yyqzvdss49xd2t",
+      "notes": "Registered via Authority-mediated operator registration protocol"
+    },
+    {
+      "npub": "npub1z578tazry4mqsfhrhns29qe8ylc6edu6lptr27066ymka4005yvqtwjgjj",
+      "role": "operator",
+      "status": "active",
+      "member_since": "2026-10-30",
+      "display_name": "FieldData MCP",
+      "services": [
+        {
+          "name": "FieldData MCP",
+          "url": "https://fielddata-mcp.fastmcp.app/mcp",
+          "description": "What your own ground actually measured: readings, history and daily summaries from your own weather station and soil probes, read under your own vendor keys.",
+          "product_url": "https://cafe.tollbooth-dpyc.com/products/fielddata-mcp"
+        }
+      ],
+      "upstream_authority_npub": "npub157hmysd6sw7m8kkldycnnc74mssxp9nweddk2p5sw9l2nktr950qyxrenn",
       "notes": "Registered via Authority-mediated operator registration protocol"
     },
     {
