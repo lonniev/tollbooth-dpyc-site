@@ -45,6 +45,7 @@ purchases for providing registration, certification, and persistence.
 - [Cypher MCP](https://cypher-mcp.fastmcp.app/mcp): Monetized graph answers: operator-authored, parameterized Cypher queries over a Neo4j graph, each sold as a named, priced answer. More: https://cafe.tollbooth-dpyc.com/products/cypher-mcp
 - [TheBrain MCP](https://personal-brain.fastmcp.app/mcp): AI-agent access to a personal TheBrain knowledge graph: query, create and link thoughts, notes and attachments. More: https://cafe.tollbooth-dpyc.com/products/personal-brain-mcp
 - [BeesKnees MCP](https://beesknees-mcp.fastmcp.app/mcp): The Bee's Knees: a race to the queen across five hives, where every move is a paid tool call and the first bee to reach a queen takes the round. More: https://cafe.tollbooth-dpyc.com/products/beesknees-mcp
+- [FieldData MCP](https://fielddata-mcp.fastmcp.app/mcp): What your own ground actually measured: readings, history and daily summaries from your own weather station and soil probes, read under your own vendor keys. More: https://cafe.tollbooth-dpyc.com/products/fielddata-mcp
 
 ## Advocates (community utility services)
 - [OAuth2 Authorization Code Collector](https://tollbooth-oauth2-collector.fastmcp.app/mcp): Holds OAuth2 authorization codes, sealed to the operator that asked, until that operator's MCP collects them once.
@@ -71,5 +72,5 @@ Free tools (`session_status`, `check_balance`, `check_oauth_status`, `check_proo
 ## Site
 - https://tollbooth-dpyc.com
 - https://mcps.tollbooth-dpyc.com — the MCPs collection: a page per service
-- Registry updated 2026-10-28T14:44:44Z
-- Snapshot taken 2026-10-28T14:46:03.969Z
+- Registry updated 2026-10-30T17:40:20Z
+- Snapshot taken 2026-10-30T17:55:47.822Z
