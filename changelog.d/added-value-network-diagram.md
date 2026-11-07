@@ -1,0 +1,1 @@
+- How It Works opens with the Tollbooth DPYC value network diagram: every actor, the flows between them, and the seven steps from build to paying the bills.
