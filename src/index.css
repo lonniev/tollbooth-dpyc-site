@@ -72,26 +72,3 @@
     transform: perspective(1500px) rotateY(-6deg) rotateX(2deg);
   }
 }
-
-/* Value network diagram (ValueNetwork.tsx). Flow colors are read by the
-   drawing script from these custom properties. */
-.value-network {
-  --vn-btc: #ffb22e;
-  --vn-fiat: #4dffb0;
-  --vn-mcp: #3fe4ff;
-  --vn-cert: #d6a8ff;
-  --vn-chain: #ffe066;
-  --vn-build: #7fb6ff;
-  --vn-kyc: #ff5d6c;
-  font-family: 'Oswald', 'Arial Narrow', sans-serif;
-}
-.value-network .vn-pulse {
-  animation: vn-pulse 3.2s ease-in-out infinite;
-}
-@keyframes vn-pulse {
-  0%, 100% { stroke-opacity: 0.95; }
-  50% { stroke-opacity: 0.55; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .value-network .vn-pulse { animation: none; }
-}
