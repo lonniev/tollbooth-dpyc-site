@@ -7,6 +7,7 @@ import {
   SlidersHorizontal,
   BadgeCheck,
 } from 'lucide-react';
+import ValueNetwork from './ValueNetwork';
 
 const steps = [
   {
@@ -52,6 +53,8 @@ export default function HowItWorks() {
           Security, Simplicity, Performance, Flexibility, Bitcoin, Profits —
           all from open-source agent-ready Python FastMCP services.
         </p>
+
+        <ValueNetwork />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((step, i) => (
