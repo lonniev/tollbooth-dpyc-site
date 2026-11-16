@@ -1,0 +1,1 @@
+- The registry snapshot now lists Task Booth and Purser, and the OAuth callback at its new address, https://oauth.tollbooth-dpyc.com.
